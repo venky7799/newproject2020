@@ -1,0 +1,50 @@
+.sidebar{
+    background: rgba(44, 44, 44, 0) !important;
+    position: absolute;
+    width: 120px;
+    height: 400px;
+    display: block;
+    top:15vh;
+    z-index: 99;
+    padding-right: 2rem;
+    padding-bottom: 5rem;
+    .vertical
+    {
+        display: flex;
+        width: 100%;
+        margin-left: 50px;
+        a{  
+            margin-left: 10px;
+            position: absolute;
+            margin-top: 150px;
+            flex-direction: column;
+            color: $white;
+            transform: rotate(-90deg);
+            text-decoration: none;
+            font-size: 1rem;
+            letter-spacing: 0.2rem;
+            z-index: 2;
+            a:hover{
+                color: $orange;
+            }
+            &:nth-child(2){
+                position: relative;
+                display: block;
+                margin-top: 350px;
+            }
+            &:nth-child(1):hover{
+                color: $black;
+               
+            }
+            
+            &:nth-child(2):hover{
+                color: $black;
+            }
+        }
+        
+    }
+    @include media('<=phone') {
+        display: none;
+    }
+
+    }   

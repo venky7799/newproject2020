@@ -1,0 +1,75 @@
+
+.header{
+    position: fixed !important;
+    width: 100%;
+    height: 100px;
+    z-index:30;
+    @include media ('<=phone'){
+        height: 90px;
+    };
+    .logo{
+        a{
+            font-size:1.8rem;
+            letter-spacing: 0.5rem;
+            color: $white;
+            text-decoration: none;
+            font-weight: 800;
+        }
+    }
+    
+   .nav-toggle{
+       cursor: pointer;
+       position: relative;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       @include media("<=tablet"){
+           margin-right: 24px;
+       }
+       @include media("<=tablet"){
+        margin-right: 16px;
+        width: 20px;
+    }
+    .hamburger-menu{
+        width: 25px;
+       
+        span:nth-child(1){
+            display: block;
+            background-color: $white;
+            width: 60%;
+            height: 2px;
+                text-align: left;
+        }
+        span:nth-child(2){
+            display: block;
+            background-color:$white;
+            width: 100%;
+            height: 2px;
+            color: $black;
+            margin-top: 5px;
+
+        }
+        span:nth-child(3){
+            display: block;
+            background-color:$white;
+            width: 60%;
+            height: 2px;
+            color: $black;
+            margin-top: 5px;
+        }
+    }
+    .hamburger-close{
+        position: absolute;
+        display: none;
+        svg{
+            @include media("<=tablet"){
+               width: 56px;
+            }
+            @include media("<=tablet"){
+             margin-right: 16px;
+             width: 48px;
+         }
+        }
+    }
+   }
+}

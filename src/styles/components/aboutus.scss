@@ -1,0 +1,540 @@
+
+.aboutusjs{
+    font-size: 16px;
+    background: $black;
+   
+    .page{
+        height: 70vh;
+        .container {
+            
+            .row{
+                height: 100%;
+
+                .intro{
+                        display: inline-block;
+                        width: 80%;
+                        padding-top: 3rem;
+
+                    span{
+
+                        display: inline-block;
+                        width: 100%;
+                        font-weight: lighter;
+                        line-height:150%;
+
+                        text-align: center;
+                        font-size: 4.5rem;
+                        @include media('<=phone'){
+                            font-size: 2rem;
+
+                         }
+                    
+                    }
+                } 
+            }
+
+        }
+    }
+    .rowline{
+        display: block;
+        overflow-y:hidden;
+        overflow-x:hidden;
+        color: blanchedalmond;
+        margin-bottom: 20rem;
+        div{
+           
+            span{
+                display: flex;
+                font-size: 4rem;
+                font-weight: 400;
+                white-space: nowrap;
+                -webkit-text-stroke: 1px $white;
+                -webkit-text-fill-color: rgba(255, 255, 255, 0);
+                -webkit-text-stroke-width: 1px;
+                margin-left: 5rem;
+                margin-right: 5rem;
+                @include media('<=phone'){
+                    font-size: 1.5rem;
+                    margin-left: 2rem;
+                    margin-right: 2rem;
+
+                 }
+            }
+        }
+    }
+
+    .explainsection{
+        height: 120vh;
+        @include media('<=phone'){
+           padding: 9px 20px;
+            height: 110vh;
+            position: relative;
+         }
+        .clientvalue{
+            width: 700px;
+            min-width: 700px;
+            margin: 0 auto;
+            
+                @include media('<=phone'){
+                    width: 50%;
+                    
+                 }
+            .clientvaluesub{
+                display: flex;
+                padding: 0 32px;
+                align-items: center;
+                justify-content: center;
+                line-height:150%;
+
+                @include media('<=phone'){
+                    display: block;
+                    padding: 20px 10px;
+                    align-items: center;
+                    justify-content: center;
+                    line-height:1.3;
+                    width: 45%;
+                    font-size: 1rem;
+
+                    
+
+                 }
+                span{
+                    font-size: 1.5rem;
+                    @include media('<=phone'){
+                      
+                        font-size: 1rem;
+    
+                        
+    
+                     }
+                }
+                span{
+
+                }
+            }
+        }
+        .explain{
+            margin-top: 20rem;
+            @include media('<=phone'){
+                margin-top: 5rem;
+
+
+             }
+            .questionexplain{
+                span{
+                    font-size: 1rem;
+                    line-height: 150%;
+                    color: $orange;
+                    margin-right: 1.9rem;
+                }
+                .line{
+                    display: block;
+                    width: 22%;
+                    height: 1.5px;
+                    background: $orange;                  
+                }
+            }
+            .explaindd{
+                display: flex;
+                margin-top: 3rem;
+                justify-content: space-between;
+                @include media('<=phone'){
+                    display: block;
+
+                 }
+                .explaindiscription{
+                    width: 500px;
+                    margin-top: 4rem;
+                    @include media('<=phone'){
+                        width: 100%;
+                        font-size: 1rem;
+        
+        
+                     }
+                    span{
+                        line-height:150%;
+                        letter-spacing: 0.07rem;
+                        word-spacing: 0.06rem;
+                        color: $white;
+                        font-size: 1.2rem;
+                        @include media('<=phone'){
+                            line-height:100%;
+                        letter-spacing: 0.01rem;
+                        word-spacing: 0.01rem;
+                        color: $white;
+                        font-size: 1rem;
+                         }
+                    }
+                }
+                .explaindiscriptionn{
+                    width: 450px;
+                    font-size: 1.2rem;
+                    @include media('<=phone'){
+                        width: 100%;
+                    line-height:1.5;
+                    font-size: 1rem;
+                     }
+                    span{
+                        line-height:1.3;
+                        @include media('<=phone'){
+                    font-size: 1rem;
+                    line-height:150%;
+
+                         }
+                    }
+                    .line{
+                        display: block;
+                        width: 100%;
+                        height: 1.5px;
+                        background: $orange;
+                        background-color: $orange;
+                        color: #000;
+                        margin-top: 1rem;
+
+                    }
+                }
+            }
+           
+        } 
+    } 
+
+    .newteamsection{
+        position: relative;
+        @include media('<=phone'){
+            height: 140vh;
+            padding: 10px 5px;
+                    font-size: 1rem;
+                    display: block;
+         }
+        .leftside{
+            position: relative;
+            .sec-1{
+                height: 40vh;
+                width: 40vw;
+                @include media('<=phone'){
+                    width: 150%;
+                height: 10vh;
+
+                  }
+                .sec-1-2{
+                    display: inline-block;
+                     position: absolute;
+                     width: 140%;
+                     @include media('<=phone'){
+                        width: 100%;
+                        display: block;
+                      }
+                    span{
+                        position: absolute;
+                        font-size: 4.5rem;
+                        @include media('<=phone'){
+                            font-size: 2rem;
+                         }
+                     
+                    }
+                }
+            }
+            .sec-2{
+                margin-top: 12rem;
+                position: relative;
+                @include media('<=phone'){
+                    margin-top: 5rem;
+
+                 }
+                .sec-2-1{
+                    height: 5vh;
+                    display: flex;
+                    justify-content: right;
+                    
+                    .sec-2-2{
+                        width: 80%;
+                        position: absolute;
+                        border-bottom: 1px solid $orange;
+                       
+                        span{
+                            display: flex;
+                            justify-content: left;
+                            font-size: 1rem;                          
+                            letter-spacing: 0.8px;
+                            color: $orange;
+                           
+                        }
+                    }
+                    
+                }
+            }
+            .sec-3{
+                position: relative;
+
+                .sec-3-1{
+                    height: 28vh;
+                    display: flex;
+                    justify-content: right;
+                    @include media('<=phone'){
+                        height: 19vh;
+
+                     }
+                    .sec-3-2{
+                        width: 80%;
+                        position: absolute;
+                        margin-top: 4rem;
+                        @include media('<=phone'){
+                            width: 100%;
+                            
+                            margin-top: 1rem;
+                         }
+                        span{
+                            width: 90%;
+                            display: flex;
+                            justify-content: left;
+                            font-size: 1.5rem;
+
+                          
+                                margin-top: 20px;
+                                letter-spacing: 0.2px;
+                                line-height:150%;
+
+                                @include media('<=phone'){
+                                    width: 100%;
+                                    display: block;
+                                    margin-top: 1rem;
+                                    font-size: 1rem;
+                                 }
+                        }
+                
+                    }
+                }    
+            }
+            .sec-4{
+                position: relative;
+                margin-bottom: 10rem;
+                .sec-4-1{
+                    position: relative;
+                    height: 2vh;
+                    display: flex;
+                    justify-content: right;
+                    .sec-4-2{
+                        width: 80%;
+                        @include media('<=phone'){
+                            width: 100%;
+                            
+                         }
+                        span{
+                            position: absolute;
+                            width: 70%;
+                            display: flex;
+                            justify-content: left;
+                            font-size: 1.5rem;
+                            letter-spacing: 0.2px;
+                            line-height:150%;
+
+                            @include media('<=phone'){
+                                width: 100%;
+                                display: block;
+                                margin-top: 0rem;
+                                font-size: 1rem;
+                             }
+                        }
+                    }
+                }
+            }
+        }
+        .rightsec{
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+           
+            .right-sec-1{
+                width: 100%;
+                span{
+                    img{
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+    .tablesection{
+        position: relative;
+        height: 80vh;
+        @include media('<=phone'){
+            height: 220vh;
+            width: 80%;
+            margin: auto auto;
+         }
+        .tablegroup{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            @include media('<=phone'){
+                display: block;
+             }
+            .tablegroup-row{
+                display: flex;
+                width: 70%;
+                justify-content: space-between;
+                align-items: center;
+                @include media('<=phone'){
+                    display: block;
+                 }
+                .table-1{
+                    .table-col-1{
+                        .table-heading{
+                            span{
+                                font-size: 2.5rem;
+                                @include media('<=phone'){
+                                    font-size: 2rem;
+
+    
+                                    
+                                 }
+                            }
+                        }
+                        .table-content{
+                            margin-top: 60px;
+                            @include media('<=phone'){
+                                margin-bottom: 30px;
+
+                                
+                             }
+                            span{
+                               
+                                ol{
+                                    list-style: none;
+                                    padding: 0px;
+                                    margin: 0px;
+                                    li{
+                                        font-size: 1.11452vw;
+                                        padding: 17px 2px;
+                                        border-bottom: 1px solid rgb(250, 188, 188);
+                                        @include media('<=phone'){
+                                            font-size: 1.5rem;
+
+                                            
+                                         }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }    
+        }
+    }
+    .contact{
+        height: 75vh;
+        width: 80%;
+        margin: auto auto;
+        @include media('<=phone'){
+            position: relative;
+            height: 190vh;
+            
+         }
+        .contact-rowandcol{
+            display: flex;
+            justify-content: space-between;
+            @include media('<=phone'){
+                display: block;
+
+    
+             }
+            .contact-col-1{
+                .contact-subcol{
+                    .contact-subcol-headingmain{
+                        margin-bottom: 6rem;
+                        span{
+
+                        }
+                    }
+                    .contact-subcol-heading{
+                        margin-bottom: 2.25rem;
+                        span{
+
+                        }
+                    }
+                    .contact-subcol-1-content{
+                        p{
+                            span{
+
+                            }
+                            span{
+                                a{
+                                    color: $orange;
+                                }
+                            }
+                        }
+                       
+                    }
+                }
+            }
+            .contact-col-2{
+                .contact-subcol{
+                    .contact-subcol-headingmain{
+                        margin-bottom: 6rem;
+
+                        span{
+
+                        }
+                    }
+                    .contact-subcol-content{
+                        .contact-subcol-heading{
+                            margin-bottom: 1.5rem;
+
+                            span{
+                                font-size: 20px;
+                            }
+                        }
+                        .contact-subcol-1-content{         
+                            margin-bottom: 2.5rem;                                          
+                                span{
+                                    a{
+                                        color: $orange;
+
+                                        font-size: 13px;
+                                    }
+                                }
+                           
+                           
+                        }
+                    }
+                    
+                }
+            }
+            .contact-col-3{
+                .contact-subcol{
+                    .contact-subcol-headingmain{
+                        margin-bottom: 6rem;
+
+                        span{
+
+                        }
+                    }
+                    .contact-subcol-content{
+                        .contact-subcol-heading{
+                        margin-bottom: 1.5rem;
+
+                            span{
+    
+                            }
+                        }
+                        .contact-subcol-1-content{ 
+                            margin-bottom: 2.5rem;
+
+                                span{
+                                    a{
+                                    color: $orange;
+                                        
+                                    }
+                                }
+                           
+                           
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+
+}
