@@ -13,7 +13,7 @@ import solarproject from "../assets/solar-project.png";
 import fotoartizproject from "../assets/fotoartiz-project.png";
 import clothingproject from "../assets/clothing-project.png";
 import sriomkaliproject from "../assets/sriomkali-project.png";
-
+import bricksrootcirle from "../assets/bricksroot-circle.png";
 const Wallpaper=()=>{
     useEffect(()=>{
         gsap.registerPlugin(ScrollTrigger);
@@ -25,8 +25,19 @@ const Wallpaper=()=>{
         .fromTo(".discription", { opacity: 0, scale: 0.8, y: "+=5"}, 
         {opacity: 1, scale: 1, y: 0, duration: 1, immediateRender: false})
 
-        .fromTo(".itimg", { opacity: 0, scale: 0.8, y: "+=100"}, 
-        {delay:-1,opacity: 1, scale: 1, y: 0, duration: 0.8, immediateRender: false});
+        .fromTo(".itimgwidth", {opacity:0, width:"0%"}, 
+        {opacity:1,delay:-1, width:"90%", duration: 1.5,ease:"Expo.easeInOut", immediateRender: false})
+
+        .from(".discription-span span",0.8, { y:200,delay:-1,ease:"power4.out",skewY:10, stagger:{
+            amount:"0.4"
+        }})
+        
+        .from(".discription span div span", 1.8,{ y:200,ease:"power4.out",delay:-1,skewY:20, 
+        stagger:{
+            amount:"0.8"
+        },
+        });
+
 
         ScrollTrigger.create({
             trigger: '.itsection',
@@ -35,9 +46,38 @@ const Wallpaper=()=>{
             animation: t3,
             toggleActions: "play none none none"
              
-          })
+        })
+
+      
     },[]);
     
+    useEffect(()=>{
+        const t31=gsap.timeline();
+        t31.to(".exactly",{background:"#f0efef"})
+
+        .fromTo(".discriptionn span div span",1.8,{opacity:0, y:200,ease:"power4.out",skewY:20, 
+        stagger:{
+            amount:"0.8"
+        },
+        },{
+            opacity:1,
+            y:0,ease:"power4.out",skewY:0, 
+            stagger:{
+                amount:"0.8"
+            },
+
+        });
+      
+
+        ScrollTrigger.create({
+        trigger: '.exactly',
+        start:"-60px 50%", 
+        end:"bottom bottom",
+        animation: t31,
+        toggleActions: "play none none none"
+        })
+        
+    })
     //wallpaper(first section animation)//
     useEffect(()=>{
             //gsap animatin//
@@ -63,55 +103,50 @@ const Wallpaper=()=>{
 
             t4.to(".pagee",
             {background:"#fefefe", immediateRender: false})
-
-            gsap.timeline().to(".xhori .secstroke",500,{
-                x:500,
-                ease:'Linear.easeNone',
-                immediateRender: false,
-                repeat:-1
-            })
-            gsap.timeline().to(".xhori .firststroke",300,{
-                x:-500,
-                ease:'Linear.easeNone',
-                repeat:-1,
-                immediateRender: false,
-                delay:-500
-                
-            })
-            
-            ScrollTrigger.create({
-                trigger: '.xhori',
-                start:"-60px 50%", 
-                end:"bottom bottom",
-                animation: t4,
-                toggleActions: "play none none none"
-            })
+            t4.to('.firststroke', {
+                xPercent: -60,
+                ease: " Power4.easeOut",
+                scrollTrigger: {
+                  trigger: ".xhori",
+                  start: "top center",
+                  end: "bottom top",
+                  scrub: true
+                }
+              })   
+              t4.to('.secstroke', {
+                xPercent: -60,
+                ease: "none",
+                scrollTrigger: {
+                  trigger: ".xhori",
+                  start: "top center",
+                  end: "bottom top",
+                  scrub: true
+                }
+              })   
+         
             
         })
         
-        useEffect(()=>{
-            const t6= gsap.timeline();
-            t6.fromTo(".projects", {background:"#fefefe"}, 
-            {background:"#fefefe", duration: 0.3, immediateRender: false})
-          
-            .fromTo(".projects2 .projectimages .image", { opacity: 0,stagger:
-             .4
-              , scale: 0.8,skewY:7,delay:"0", y: "+=100"}, {stagger:
-              0.5
-              ,opacity: 1,delay:"-1", scale: 1, y: 0,skewY:0, duration: 1, immediateRender: false})
+      useEffect(()=>{
 
-             .fromTo(".projects2 .projectimages .imagee",
-             { opacity: 0, scale: 0.8,skewY:7, y: "+=100"},
-              {opacity: 1, scale: 1, skewY:0, y: 0, duration: 1, immediateRender: false})
-              
-             ScrollTrigger.create({
-              trigger: '.projects2',
-              start:"-60px 50%", 
-              end:"bottom bottom",
-              animation: t6,
-              toggleActions: "play none none none"
+        const tt1= gsap.timeline();
+        tt1.to(".creativity",{background:"#f0efef"})
+        .fromTo(".itimgigcreativity", {opacity:0, width:"0%"}, 
+        {opacity:1, width:"90%", duration: 2,ease:"Expo.easeInOut", immediateRender: false})
+
+        
+        ScrollTrigger.create({
+            trigger: '.creativity',
+            start:"-60px 50%", 
+            end:"bottom bottom",
+            animation: tt1,
+            toggleActions: "play none none none"
             })
-        });
+      })
+
+
+
+     
 
         useEffect(()=>{
 
@@ -123,13 +158,11 @@ const Wallpaper=()=>{
             .fromTo(".projects1 .project-heading", { opacity: 0, skewY: 0, x: "-=100"}, 
             {opacity: 1, skewY: 1, x: "0" , duration: 0.8, immediateRender: false})
 
-            .fromTo(".projects1 .projectimages .image",{ opacity: 0, scale: 0.8,skewY:7, y: "+=100"}, {opacity: 1, scale: 1, skewY:0, y: 0, duration: 0.8, immediateRender: false})
+            .fromTo(".projects1 .projectimages .image",{opacity:0,y:"+10"}, 
+            {opacity:1, scale: 1,duration: 1.5,y:"0"})
             
-            .fromTo(".projects1 .projectimages .imagee", { opacity: 0,stagger:
-             .4
-              , scale: 0.8,skewY:7,delay:"0", y: "+=100"}, {stagger:
-              0.5
-              ,opacity: 1,delay:"-1", scale: 1, y: 0,skewY:0, duration: 0.8, immediateRender: false})
+            .fromTo(".projects1 .projectimages .imagee",{opacity:0,y:"+10"}, 
+            {opacity:1, scale: 1, delay:-1,duration: 1.5,y:"0"})
             
                 ScrollTrigger.create({
                 trigger: '.projects1',
@@ -139,25 +172,43 @@ const Wallpaper=()=>{
                 toggleActions: "play none none none"
               })
              
+
+              const t6= gsap.timeline();
+              t6.fromTo(".projects2", {background:"#fefefe"}, 
+              {background:"#fefefe", duration: 0.3, immediateRender: false})
+            
+              .fromTo(".projects2 .projectimages .imagee", {opacity:0,y:"+10"}, 
+              {opacity:1, scale: 1,duration: 1.5,y:"0"})
+  
+              .fromTo(".projects2 .projectimages .image span", {opacity:0,width:"0px"}, 
+              {opacity:1,delay:"-1",duration: 1.5,width:"80%"})
+  
               
+                
+               ScrollTrigger.create({
+                trigger: '.projects2',
+                start:"-60px 50%", 
+                end:"bottom bottom",
+                animation: t6,
+                toggleActions: "play none none none"
+              })
+           
         
               
 
 
+        /*----------------------------project 4------------------ */
 
               const t8= gsap.timeline();
-              t8.fromTo(".projects", {background:"#fefefe"}, 
+              t8.fromTo(".projects4", {background:"#fefefe"}, 
               {background:"#fefefe", duration: 0.3, immediateRender: false})
             
-              .fromTo(".projects4 .projectimages .image", { opacity: 0,stagger:
-               .4
-                , scale: 0.8,skewY:7,delay:"0", y: "+=100"}, {stagger:
-                0.5
-                ,opacity: 1,delay:"-1", scale: 1, y: 0,skewY:0, duration: 1, immediateRender: false})
+              .fromTo(".projects4 .projectimages .image", {opacity:0,y:"+10"}, 
+              {opacity:1, scale: 1,duration: 1.5,y:"0"})
 
                .fromTo(".projects4 .projectimages .imagee",
-               { opacity: 0, scale: 0.8,skewY:7, y: "+=100"},
-                {opacity: 1, scale: 1, skewY:0, y: 0, duration: 1, immediateRender: false})
+               {opacity:0,y:"+10"}, 
+               {opacity:1, scale: 1,delay:-1,duration: 1.5,y:"0"})
                 
                ScrollTrigger.create({
                 trigger: '.projects4',
@@ -169,20 +220,22 @@ const Wallpaper=()=>{
         })
 
         useEffect(()=>{
+           
+        });
+
+        /*----------------------------project 3------------------ */
+        useEffect(()=>{
 
             const t7= gsap.timeline();
-            t7.fromTo(".projects", {background:"#fefefe"}, 
+            t7.fromTo(".projects3", {background:"#fefefe"}, 
             {background:"#fefefe", duration: 0.3, immediateRender: false})
           
-            .fromTo(".projects3 .projectimages .image", { opacity: 0,stagger:
-             .4
-              , scale: 0.8,skewY:7,delay:"0", y: "+=100"}, {stagger:
-              0.5
-              ,opacity: 1,delay:"-1", scale: 1, y: 0,skewY:0, duration: 1, immediateRender: false})
+            .fromTo(".projects3 .projectimages .image", {opacity:0,y:"+10"}, 
+            {opacity:1, scale: 1,duration: 1.5,y:"0"})
 
              .fromTo(".projects3 .projectimages .imagee",
-             { opacity: 0, scale: 0.8,skewY:7, y: "+=100"},
-              {opacity: 1, scale: 1, skewY:0, y: 0, duration: 1, immediateRender: false})
+             {opacity:0,y:"+10"}, 
+             {opacity:1, scale: 1,delay:-1,duration: 1.5,y:"0"})
               
              ScrollTrigger.create({
               trigger: '.projects3',
@@ -193,12 +246,13 @@ const Wallpaper=()=>{
             })
 
         })
+
+
     return(
         <div className="pagee">
             <section id="pagee_unclear">
                     <div className="prevoverlay"></div>
                     <div className="wallpaper-bricksroot prev disble"> 
-                        <img alt="bricksroot wallpeper" src={will}/>
                     </div>
 
                 
@@ -208,15 +262,20 @@ const Wallpaper=()=>{
                     </div> 
                     
                     <div className='companyname disccription'>
-
+                        <div className="bricksrootcircle">
+                            <img alt="bricksroot logo circle" src={bricksrootcirle}/>
+                        </div>
                         <div className="company-name">
                             <span>Bricksroot</span>
                         </div>
 
                         <div className="discription-about">
                             <span>
-                            Bricksroot is accelerating the world's transition to digital experience with web design and branding, sustainable energy with solar for homes and businesses, and the CC camera world.
-                            
+                                <div><span> Bricksroot is accelerating the world's </span></div>
+                                <div><span> transition to digital experience with web  </span></div>
+                                <div><span> design and branding, sustainable energy </span></div>
+                                <div><span> with solar for homes and businesses, and </span></div>
+                                <div><span> the CC camera world. </span></div>
                             </span> 
                            
                         </div>
@@ -242,43 +301,57 @@ const Wallpaper=()=>{
                     <div className="space-between v-center row block">
                         
                         <div className="discription">
-                            <span className="discription-span">                          
-                            We are...! 👀   
-                            </span><br></br>
+                            <div className="discription-span">                          
+                                <span className="discription-spaninside">We are...! 👀</span>   
+                            </div>
+                          
                             <span> 
-                            Leading digital agency with solid design and development expertise.
-                           .
-                            We build readymade websites, mobile applications, and elaborate online business services.
-                            <br></br>We Want to create millions in startup value by incubating and guiding disruptive companies through todays evolving digital era.
+                                <br></br>
+                              <div><span>  Leading digital agency with solid design </span></div>
+                              <div><span>  and development expertise. We build </span></div>
+                              <div><span>  websites, mobile applications, and </span></div>
+                              <div><span>  elaborate online business services.</span></div>
+                              <div><span> We Want to create millions</span></div>
+                              <div><span>   in startup value by incubating and </span></div>
+                              <div><span>   guiding disruptive companies through </span></div>
+                              <div><span>   todays evolving digital era.</span></div>                 
                             </span>
                         </div>
                         <div id="itimgig" className="itimg">
-                           
-                            <Itpic/>                           
-
-                           
+                            <div className="itimgwidth">
+                                <Itpic/>                           
+                            </div>
                         </div>
                     </div>                                              
                 </div>
             </section>
-            <section className="itsection exactly">
+
+
+
+            <section className="exactly">
          
                 {/* css will be in itinfo.scss */}
                 <div className="container">
                     <div className="space-between v-center row block">
                         
-                        <div className="discription">
-                            <span className="discription-span">                          
-                           We do...! 👀   
-                            </span><br></br>
+                        <div className="discriptionn">
+                            <div className="discription-span">                          
+                               <span>We do...! 👀   </span> 
+                            </div><br></br>
+
                             <span> 
-                            A screen doesn’t mean scroll, it means jump in. 
-                            WWe are software development company located AP. We help companies at any stage of the product software development cycle: from R&D and building MVP from scratch, to scaling, UX analyzing and improving. 
-                            <br></br>We Want to create millions in startup value by incubating and guiding disruptive companies through todays evolving digital era.
+                                <div><span> A screen doesn’t mean scroll, it means jump in.</span></div> 
+                                <div><span>We are software development company</span></div>
+                                <div><span>located in AP. We help companies at any </span></div>
+                                <div><span>stage of the product software development cycle: </span></div>
+                                <div><span>from R&D and building MVP from scratch, </span></div>
+                                <div><span>to scaling, UX analyzing and improving. We Want </span></div>
+                                <div><span>to create millions in startup value by </span></div>
+                                <div><span>incubating and guiding disruptive companies</span></div>
+                                <div><span>through todays evolving digital era.</span></div>
                             </span>
                         </div>
                         <div id="itimgig" className="itimg">
-                            
                             <span>
                                 <ul>
                                     <li>Strategy</li>
@@ -286,41 +359,41 @@ const Wallpaper=()=>{
                                     <li> UI/UX Design</li>
                                     <li>Back End</li>
                                     <li>Front End</li>
-
-                                </ul>
-                                
-                                </span>                           
+                                </ul> 
+                            </span>                           
                         </div>
                     </div>                                              
                 </div>
             </section>
-            <section className="itsection creativity">
-         
-         {/* css will be in itinfo.scss */}
-         <div className="container ">
-             <div className="space-between v-center row block">
-             <div id="itimgig" className="itimg">
-                    <span>
-                    <img alt="bricksroot creative" src={creative}/>                  
 
 
-                    </span> 
-                </div>
 
-                <div className="discription">
-                    <span className="discription-span">                          
-                        Creativity is at the heart of all our projects.
-                    </span><br></br>
-                    <span> 
-                        We specialize in creating visual identities for products and brands. Whether it’s a birth or an evolution, we will put our industry expertise and passion for creativity to work for your project. 
-                        
-                    <br></br>Sincere core 	values are key to connecting with real 	people in a digital‑first society. As an agency that exists to create remarkably beautiful things that make an impact, shape culture and connect people, 
-                    </span>
-                </div>
+
+            <section className="creativity">
                 
-             </div>                                              
-         </div>
-     </section>
+                {/* css will be in itinfo.scss */}
+                <div className="container ">
+                    <div className="space-between v-center row block">
+                    <div id="itimgig" className="itimg">
+                            <div className="itimgigcreativity">
+                                <img  alt="bricksroot creative" src={creative}/>                 
+                            </div> 
+                        </div>
+
+                        <div className="discription">
+                            <span className="discription-span">                          
+                                Creativity is at the heart of all our projects.
+                            </span><br></br>
+                            <span> 
+                                We specialize in creating visual identities for products and brands. Whether it’s a birth or an evolution, we will put our industry expertise and passion for creativity to work for your project. 
+                                
+                            <br></br>Sincere core 	values are key to connecting with real 	people in a digital‑first society. As an agency that exists to create remarkably beautiful things that make an impact, shape culture and connect people, 
+                            </span>
+                        </div>
+                        
+                    </div>                                              
+                </div>
+            </section>
 
 
          
@@ -346,7 +419,10 @@ const Wallpaper=()=>{
                     </div>
                 </div>
             </section>
-            <section className="projects projects2">
+
+
+            
+            <section className="projects2">
                 <div className="container">
                     <div className="row v-center space-between">
                         <div className="project">
@@ -360,7 +436,7 @@ const Wallpaper=()=>{
                                         <span>Given goal is to make it global and make this company to recognized in digital area. We started to find solutions by interviewing consumers and managers</span></span>
                                 </div>
                                 <div className="image">
-                                    <span><img alt="sriomkaliproject" src={sriomkaliproject}/></span>
+                                    <span><img className="project2img" alt="sriomkaliproject" src={sriomkaliproject}/></span>
                                     
                                 </div>
                             </div>
@@ -370,7 +446,7 @@ const Wallpaper=()=>{
                 </div>
             </section>
 
-            <section className="projects projects3">
+            <section className="projects3">
                 <div className="container">
                     <div className="row v-center space-between">
                         <div className="project">
@@ -398,7 +474,8 @@ const Wallpaper=()=>{
                 </div>
             </section>
 
-            <section className="projects projects4">
+
+            <section className="projects4">
                 <div className="container">
                     <div className="row v-center space-between">
                         <div className="project">

@@ -42,7 +42,7 @@ const Header=({history, dimensions})=>{
         gsap.to('body',{css:{overflow:"hidden"}});
         
         tl2.to('.App',{duration:1,
-        y: dimensions.width <= 654 ? "70vh" : (dimensions.height/1.3)+window.scrollY,
+        y: dimensions.width <= 654 ? "70vh" : (dimensions.height/1.1)+window.scrollY,
       ease:"expo.inOut"})
       .to('.nav-toggle span',{
         duration:0.3,

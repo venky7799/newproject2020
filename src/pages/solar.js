@@ -15,11 +15,12 @@ const Solar  =()=>{
     useEffect(()=>{
         gsap.registerPlugin(ScrollTrigger);
         const j1= gsap.timeline();
-
+        j1.fromTo(".solarorange",{ backgroundColor:"#fefffe" ,scale: 1.5,y:"-50"}, 
+        {y:"-800", scale: 1,ease:"Expo.easeInOut",duration: 3.5,display:"none"})
         j1.fromTo(".solarimage img",{ opacity: 0, scale: 1.5}, 
-        {opacity: 1, scale: 1,duration: 1.5, immediateRender: false})
+        {opacity: 1, scale: 1,duration: 1.5,delay:'-2.5', immediateRender: false})
         .fromTo(".overlaysolar",{ x: "0"}, 
-        {opacity: 1,display:"none", scale: 1,filter: "saturate(0)", x: "-1500",delay:"-0.5", duration: 1.5, immediateRender: false});
+        {opacity: 1,display:"none", scale: 1,filter: "saturate(0)", x: "-1500",delay:"-1.1", duration: 1.5, immediateRender: false});
 
         gsap.registerPlugin(ScrollTrigger);
         const j2= gsap.timeline();
@@ -36,17 +37,60 @@ const Solar  =()=>{
          skewY:7,
          stagger:{
            amount:0.3
-         }
+         },
        });
 
 
         ScrollTrigger.create({
             trigger: '.solarcontainer',
-            start:"-40px 50%", 
+            start:"-90px 20%", 
             end:"bottom bottom",
             animation: j2,
             toggleActions: "play none none none",
-          })
+        })
+
+
+          const j3= gsap.timeline();
+          j3.fromTo(".tablegroup-row",{opacity:0,y:"+10"}, 
+          {opacity:1, scale: 1,duration: 1.5,y:"0", immediateRender: false})
+
+          
+            ScrollTrigger.create({
+                trigger: '.solar-tablesection',
+                start:"-90px 20%", 
+                end:"bottom bottom",
+                animation: j3,
+                toggleActions: "play none none none",
+            })
+
+            
+            const j4= gsap.timeline();
+            j4.fromTo(".solar-wesell",{opacity:0,y:"+10"}, 
+            {opacity:1, scale: 1,duration: 1.5,y:"0"})
+  
+            
+              ScrollTrigger.create({
+                  trigger: '.solar-wesell',
+                  start:"-90px 20%", 
+                  end:"bottom bottom",
+                  animation: j4,
+                  toggleActions: "play none none none",
+                  
+              });
+
+              const j5= gsap.timeline();
+              j5.fromTo(".solar-stats",{opacity:0,y:"+10"}, 
+              {opacity:1, scale: 1,duration: 1.5,y:"0"})
+    
+              
+              ScrollTrigger.create({
+                trigger: '.solar-stats',
+                start:"-90px 20%", 
+                end:"bottom bottom",
+                animation: j5,
+                toggleActions: "play none none none",
+            })
+
     })
     
 
@@ -58,19 +102,20 @@ const Solar  =()=>{
                 <title>Solar Energy|bricksroot</title>
                 <link rel="shortlink" href="http://www.Bricksroot.com/solar" />
 
-                <link rel="canonical" href="https://www.tesla.com/solar" />
+                <link rel="canonical" href="https://www.bricksroot.com/solar" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
                 <meta
                     name="description"
                     content="Bricksroot solar makes it easy to produce clean, renewable energy for your home or business and to take control of your energy use. Learn more about solar."
                 />
-                <meta name="keywords" content="Solar, Solar Panels, Tesla Energy, Renewable Energy"/>
+                <meta name="keywords" content="Solar, Solar Panels,  Renewable Energy"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="alternate" hreflang="en" href="/solar"/> 
-                <meta name="twitter:title" content="Solar Panels | Tesla"/>
+                <meta name="twitter:title" content="Solar Panels | bricksroot"/>
 
             </Helmet>
+            <div className="solarorange"></div>
            <section className="solar-image-first">
                 <div className="contaier">
                     <div className="row">

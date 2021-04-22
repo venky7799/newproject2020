@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9e74469a.chunk.css",
+    "main.js": "/static/js/main.3e9a9771.chunk.js",
+    "main.js.map": "/static/js/main.3e9a9771.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.ad540005.js",
+    "runtime-main.js.map": "/static/js/runtime-main.ad540005.js.map",
+    "static/js/2.b6cfaccf.chunk.js": "/static/js/2.b6cfaccf.chunk.js",
+    "static/js/2.b6cfaccf.chunk.js.map": "/static/js/2.b6cfaccf.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.a9f98bbf45083957f688b1f4492c68e7.js": "/precache-manifest.a9f98bbf45083957f688b1f4492c68e7.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.9e74469a.chunk.css.map": "/static/css/main.9e74469a.chunk.css.map",
+    "static/js/2.b6cfaccf.chunk.js.LICENSE.txt": "/static/js/2.b6cfaccf.chunk.js.LICENSE.txt",
+    "static/media/ABOUTUSBRICKSROOT.png": "/static/media/ABOUTUSBRICKSROOT.2c69481b.png",
+    "static/media/Group2.83a14551.svg": "/static/media/Group2.83a14551.svg",
+    "static/media/arrow-right.dc372a07.svg": "/static/media/arrow-right.dc372a07.svg",
+    "static/media/circlearrow.ea0dc563.svg": "/static/media/circlearrow.ea0dc563.svg",
+    "static/media/clothing-project.png": "/static/media/clothing-project.a6842cb9.png",
+    "static/media/creative.png": "/static/media/creative.7e3714d5.png",
+    "static/media/curology-mmin.png": "/static/media/curology-mmin.ed0077d3.png",
+    "static/media/fotoartiz-project.png": "/static/media/fotoartiz-project.21473612.png",
+    "static/media/mdi_handshake.png": "/static/media/mdi_handshake.008d520b.png",
+    "static/media/solar-house-1.jpg": "/static/media/solar-house-1.047c7983.jpg",
+    "static/media/solar-house-sea.jpg": "/static/media/solar-house-sea.47e3f284.jpg",
+    "static/media/solar-house.jpg": "/static/media/solar-house.438a3d23.jpg",
+    "static/media/solar-man.jpg": "/static/media/solar-man.016d9795.jpg",
+    "static/media/solar-project.png": "/static/media/solar-project.c40bd4d9.png",
+    "static/media/solar-tent.jpg": "/static/media/solar-tent.0ba0a87b.jpg",
+    "static/media/sriomkali-project.png": "/static/media/sriomkali-project.1bd034a2.png",
+    "static/media/wallpaper2.png": "/static/media/wallpaper2.aa8e854b.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ad540005.js",
+    "static/js/2.b6cfaccf.chunk.js",
+    "static/css/main.9e74469a.chunk.css",
+    "static/js/main.3e9a9771.chunk.js"
+  ]
+}
