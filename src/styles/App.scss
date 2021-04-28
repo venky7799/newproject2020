@@ -19,14 +19,13 @@
   width:100%;
   overflow:hidden;
   .scroll{
-    
   };
 }
 body,
 html {
   user-select: none;
   background: $black;
-  overscroll-behavior: none;
+  overscroll-behavior-y: none;
   margin: 0;
   font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",

@@ -11,8 +11,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {ReactComponent as Rightarrow} from '../assets/arrow-right.svg';
 
 const Solar  =()=>{
+   
+  
 
     useEffect(()=>{
+     
+
         gsap.registerPlugin(ScrollTrigger);
         const j1= gsap.timeline();
         j1.fromTo(".solarorange",{ backgroundColor:"#fefffe" ,scale: 1.5,y:"-50"}, 
@@ -23,10 +27,15 @@ const Solar  =()=>{
         {opacity: 1,display:"none", scale: 1,filter: "saturate(0)", x: "-1500",delay:"-1.1", duration: 1.5, immediateRender: false});
 
         gsap.registerPlugin(ScrollTrigger);
+
+/*
         const j2= gsap.timeline();
+        /*
 
         j2.fromTo(".projectimages .image",{ opacity: 0, scale: 1.5}, 
         {opacity: 1, scale: 1,duration: 1.5, immediateRender: false})
+
+
         .fromTo(".overlaysolarcontainer",{ y: "0"}, 
         {opacity:1, y: "+800",display:"none",delay:"-0.5", duration: 1.5, immediateRender: false})
 
@@ -34,21 +43,24 @@ const Solar  =()=>{
          y:200,
          ease:"power4.out",
          delay:-1,
-         skewY:7,
+         skewY:3,
          stagger:{
            amount:0.3
          },
-       });
+       });*/
 
-
+/*
         ScrollTrigger.create({
+
             trigger: '.solarcontainer',
             start:"-90px 20%", 
             end:"bottom bottom",
             animation: j2,
             toggleActions: "play none none none",
-        })
+         markers:true
 
+        })
+*/
 
           const j3= gsap.timeline();
           j3.fromTo(".tablegroup-row",{opacity:0,y:"+10"}, 
@@ -67,7 +79,7 @@ const Solar  =()=>{
             const j4= gsap.timeline();
             j4.fromTo(".solar-wesell",{opacity:0,y:"+10"}, 
             {opacity:1, scale: 1,duration: 1.5,y:"0"})
-  
+            
             
               ScrollTrigger.create({
                   trigger: '.solar-wesell',
@@ -90,10 +102,14 @@ const Solar  =()=>{
                 animation: j5,
                 toggleActions: "play none none none",
             })
-
+          
+       
+          
     })
     
 
+        
+      
     return(
        <div className="solar">
             <Helmet>

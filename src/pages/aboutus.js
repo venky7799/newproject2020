@@ -174,7 +174,7 @@ const Aboutus  =()=>{
                                 <span>Web Agency</span>
                                 </div>
                                 <div className="contact-subcol-1-content">
-                                    <span><a href="mailto:webagency@bricksroot.com ">💻💻💻💻💻</a> </span> 
+                                   <a href="mailto:webagency@bricksroot.com "> <span role="img" aria-label="mail">💻💻💻💻💻 </span> </a>
                                 </div>
                             </div>
                             <div className="contact-subcol-content">
@@ -182,7 +182,7 @@ const Aboutus  =()=>{
                                 <span>Solar</span>
                                 </div>
                                 <div className="contact-subcol-1-content">
-                                    <span><a href="mailto:solarenergy@bricksroot.com">🌞🌞🌞🌞🌞🌞🌞</a> </span> 
+                                  <a href="mailto:solarenergy@bricksroot.com"><span role="img" aria-label="SOLAR">🌞🌞🌞🌞🌞🌞🌞</span> </a> 
                                 </div>
                             </div>
                             <div className="contact-subcol-content">
@@ -190,7 +190,7 @@ const Aboutus  =()=>{
                                 <span>Cc camera</span>
                                 </div>
                                 <div className="contact-subcol-1-content">
-                                    <span><a href="mailto:cccamera@bricksroot.com">🎥📸📷📷📷📷📷📷📷📷</a> </span> 
+                                   <a href="mailto:cccamera@bricksroot.com"><span role="img" aria-label="cccamera">🎥📸📷📷📷📷📷📷📷📷 </span> </a>
                                 </div>
                             </div>
                             <div className="contact-subcol-content">
@@ -198,7 +198,7 @@ const Aboutus  =()=>{
                                 <span>Work with us?</span>
                                 </div>
                                 <div className="contact-subcol-1-content">
-                                    <span><a href="mailto:careers@bricksroot.com">💪💪💪💪💪💪💪💪</a> </span> 
+                                  <a href="mailto:careers@bricksroot.com"><span role="img" aria-label="career ">💪💪💪💪💪💪💪💪 </span> </a>
                                 </div>
                             </div>
                             </div>                    
@@ -213,7 +213,7 @@ const Aboutus  =()=>{
                                     <span></span>
                                     </div>
                                     <div className="contact-subcol-1-content">
-                                        <span><a target="_blank" href="https://www.instagram.com/bricksroot/">Instagram</a> </span> 
+                                        <span><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/bricksroot/">Instagram</a> </span> 
                                     </div>
                                 </div>
                                 <div className="contact-subcol-content">
@@ -221,7 +221,7 @@ const Aboutus  =()=>{
                                     <span></span>
                                     </div>
                                     <div className="contact-subcol-1-content">
-                                        <span><a target="_blank" href="https://twitter.com/bricksroot">Twitter</a> </span> 
+                                        <span><a target="_blank" rel="noopener noreferrer" href="https://twitter.com/bricksroot">Twitter</a> </span> 
                                     </div>
                                 </div>
                                
@@ -230,7 +230,7 @@ const Aboutus  =()=>{
                                     <span></span>
                                     </div>
                                     <div className="contact-subcol-1-content">
-                                        <span><a target="_blank" href="https://www.instagram.com/bricksroot/">Behance</a> </span> 
+                                        <span><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/bricksroot/">Behance</a> </span> 
                                     </div>
                                 </div>
                                 <div className="contact-subcol-content">
@@ -238,7 +238,7 @@ const Aboutus  =()=>{
                                     <span></span>
                                     </div>
                                     <div className="contact-subcol-1-content">
-                                        <span><a target="_blank" href="https://www.linkedin.com/company/bricksroot-power">LinkedIn</a> </span> 
+                                        <span><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/bricksroot-power">LinkedIn</a> </span> 
                                     </div>
                                 </div>
                             </div>                       

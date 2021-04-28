@@ -8,12 +8,14 @@ import creative from '../assets/creative.png';
 
 import will from "../assets/wallpaper2.png";
 import handshake from "../assets/mdi_handshake.png";
-import {ReactComponent as Itpic} from "../assets/Group2.svg";
+import Itpic from "../assets/Group3.png";
 import solarproject from "../assets/solar-project.png";
 import fotoartizproject from "../assets/fotoartiz-project.png";
 import clothingproject from "../assets/clothing-project.png";
 import sriomkaliproject from "../assets/sriomkali-project.png";
 import bricksrootcirle from "../assets/bricksroot-circle.png";
+
+
 const Wallpaper=()=>{
     useEffect(()=>{
         gsap.registerPlugin(ScrollTrigger);
@@ -253,6 +255,8 @@ const Wallpaper=()=>{
             <section id="pagee_unclear">
                     <div className="prevoverlay"></div>
                     <div className="wallpaper-bricksroot prev disble"> 
+                    <img alt="bricksroot zindex" src={will}/>
+
                     </div>
 
                 
@@ -302,7 +306,7 @@ const Wallpaper=()=>{
                         
                         <div className="discription">
                             <div className="discription-span">                          
-                                <span className="discription-spaninside">We are...! 👀</span>   
+                                <span className="discription-spaninside" role="img" aria-label="sheep">We are...! 👀</span>   
                             </div>
                           
                             <span> 
@@ -319,7 +323,8 @@ const Wallpaper=()=>{
                         </div>
                         <div id="itimgig" className="itimg">
                             <div className="itimgwidth">
-                                <Itpic/>                           
+                              
+                                <img  alt="bricksroot creative" src={Itpic}/>                            
                             </div>
                         </div>
                     </div>                                              
@@ -336,7 +341,7 @@ const Wallpaper=()=>{
                         
                         <div className="discriptionn">
                             <div className="discription-span">                          
-                               <span>We do...! 👀   </span> 
+                               <span role="img" aria-label="sheep">We do...! 👀   </span> 
                             </div><br></br>
 
                             <span> 
@@ -403,7 +408,7 @@ const Wallpaper=()=>{
                     <div className="row v-center space-between">
                         <div className="project">
                             <div className="project-heading">
-                                <div>🎊 Our Projects</div>
+                                <div><span role="img" aria-label="sheep">🎊</span> Our Projects</div>
                             </div>
                             <div className="projectimages">
                                 <div className="image">
@@ -521,12 +526,12 @@ const Wallpaper=()=>{
                             <span className="redspot"></span>
                             <div className="social_account">
                                 <div>
-                                   <span> <a target="_blank" href="https://twitter.com/bricksroot">twitter</a></span>
-                                   <span> <a target="_blank" href="https://www.linkedin.com/company/bricksroot-solarenergy">LindedIn</a></span>
+                                   <span> <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/bricksroot">twitter</a></span>
+                                   <span> <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/bricksroot-solarenergy">LindedIn</a></span>
                                 </div>
                                 <div>
-                                <span> <a target="_blank" href="https://www.instagram.com/bricksroot/">Instagram</a></span>
-                                <span> <a target="_blank" href="https://www.youtube.com/channel/UCymAamAco8LOqfw5QAw9MZg">Youtube</a></span>
+                                <span> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/bricksroot/">Instagram</a></span>
+                                <span> <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCymAamAco8LOqfw5QAw9MZg">Youtube</a></span>
                                 </div>
                             </div>
                         </div>

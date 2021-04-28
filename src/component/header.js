@@ -136,7 +136,7 @@ const Header=({history, dimensions})=>{
           css:{overflow:"auto"}
         }).to("nav",{
           css:{
-            display:"none"
+            display:"block"
           }
         });
       }

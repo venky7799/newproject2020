@@ -1,8 +1,7 @@
-import React,{useEffect, useRef, useState} from "react";
+import React,{useEffect, useRef, useState, Suspense} from "react";
 import {Route} from "react-router-dom";
 import "./styles/App.scss";
 import Header from "./component/header";
-import gsap from "gsap/gsap-core";
 import Navigation from "./component/navigation";
 import useWindowSize from "./hooks/useWindowSize";
 import ReactGa from "react-ga";
@@ -12,12 +11,14 @@ import ScrollMagic from "scrollmagic";
 import addIndicators from "scrollmagic";
 */
 //pages
-import Home from "./pages/home"
-import Services from "./pages/services"
-import Cc from "./pages/cc"
-import Solar from "./pages/solar"
-import About from "./pages/aboutus"
 
+import Services from "./pages/services"
+import Home from "./pages/home"
+
+
+const Cc = React.lazy(()=> import('./pages/cc'));
+const Solar = React.lazy(()=> import("./pages/solar"));
+const About = React.lazy(()=> import("./pages/aboutus"));
 
 
 const routes=[
@@ -28,7 +29,6 @@ const routes=[
   {path:'/about' , name:'About', Component:About},
 
 ];
-
 
 // this funtion used wait for a sec and then refresh the when resize with height and width
 function debounce(fn,ms) {
@@ -58,7 +58,7 @@ function App(){
   //for skew scrolling//
   //hook
   const size= useWindowSize();
-  
+ 
   // Ref for parent div and scrolling div
   const app = useRef();
   const scrollContainer = useRef();
@@ -78,10 +78,21 @@ function App(){
     requestAnimationFrame(() => skewScrolling());
   }, []);
 
+  setTimeout(() => {
+    setBodyHeight();
+    console.log("asdf");
+  }, 5000);
+
+ 
   //set the height of the body.
   useEffect(() => {
     setBodyHeight();
   }, [size.height]);
+
+
+ 
+  
+
 
   //Set the height of the body to the height of the scrolling div
   const setBodyHeight = () => {
@@ -89,6 +100,17 @@ function App(){
       scrollContainer.current.getBoundingClientRect().height
     }px`;
   };
+
+  var as = document.addEventListener("click",setBodyHeight)
+
+  //set the height of the body.
+  useEffect(() => {
+    setBodyHeight();
+    
+  }, [as]);
+
+
+
 
   // Scrolling
   const skewScrolling = () => {
@@ -116,24 +138,27 @@ function App(){
 
 
 
-
+/*
   //preventing flash from happening.//  
   gsap.to("body",0,{css:{visibility:"visible"}});
+
+*/
 
 //this is capturing height and width and setting it to height and widht properties
   const[dimensions, setDimensions]=useState({
     height : window.innerHeight,
     width : window.innerWidth
   });
-  useEffect(()=>{
+
+
+  useEffect(()=>{/*
     //grab inner height of window fro mobile reasons when dealing with vh
     let vh = dimensions.height*0.01;
     //set css varible vh
     document.documentElement.style.setProperty("--vh",`${vh}px`);
-
-
+*/
    //******************** */
-    //create a function that sets the state to height and widht 
+    //create a function that sets the state to height and width
    
     const debounceHandleResize= debounce(function handleResize() {
       setDimensions({
@@ -141,19 +166,18 @@ function App(){
         width:window.innerWidth
       });
     },1000);
-    window.addEventListener("resize",debounceHandleResize);
+      
+      window.addEventListener("resize",debounceHandleResize);
 
     //removes event listener from window
     return()=>{
       window.removeEventListener("resize", debounceHandleResize);
+      
     };
 
     //***************************** */
    
-    
 
-  
-    
 })
 
 
@@ -165,11 +189,13 @@ function App(){
         <Header dimensions={dimensions} />
         
           <div className="App">
-            {routes.map(({path,Component})=>(
-              <Route key={path} exact path={path}>
-                <Component/>
-              </Route>
-            ))}
+            <Suspense fallback={<div>Loading..</div>}>
+              {routes.map(({path,Component})=>(
+                <Route key={path} exact path={path}>
+                  <Component/>
+                </Route>
+              ))}
+            </Suspense>
           </div>
         <Navigation/>
     
