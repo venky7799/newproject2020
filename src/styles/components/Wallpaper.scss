@@ -1,7 +1,7 @@
 /* this exclueds itinfo.scss (second section)*/
 .pagee{
     background: $black;
-    section{
+    #pagee_unclear{
         background: $black;
         height: 100vh;
         @include media("<=phone"){
@@ -96,6 +96,9 @@
                     animation: rotating 4s linear infinite;
                     transform-origin: center;
                    
+                &:hover{
+                    animation-play-state: paused;
+                }
                    
                 }
             }
@@ -270,9 +273,123 @@
 /*-------------------------*/
 
 //........................start of projects section...................//
-.projects{
+.calltoaction{
+    @include media('<=phone'){
+        display: block;
+
+       }
+    .center{
+        display: flex;
+        justify-content: center;
+        a{
+            width: 35%;
+            height: 35vh;
+            text-decoration: none;
+            background-color:$orange;
+            color: rgba(0, 0, 0, 0);
+            @include media('<=phone'){
+                height: 20vh;
+
+               }
+            
+            &:hover{
+              color: $background-white;
+            }
+            .rect{
+                
+                
+                  
+                    h2{
+                        font-size: 8vw;
+                        -webkit-text-stroke: 2px white;
+                        -webkit-text-stroke-width:2px ;
+                        margin: 2rem 0;
+                        @include media('<=phone'){
+                            text-align: center;
+
+            
+                        }
+                    }
+            }
+        }
+    }
+}
+
+
+
+.innovate{
+        background-color: $background-white;
+        position: relative;
+        height: 30vh;
+        display:flex;
+        justify-content: space-between;
+    h1{
+        position: relative;
+        font-size: 5rem;
+        color: $black;
+        margin: 0 0;
+        padding: 3rem;
+        
+    }
+}
+
+
+
+.futurebuild{
+    @include media('<=phone'){
+        padding: 5px 5px;
+
+    }
+   .futurebuild-inner{
+       .futurebuild-inner-section{
+           .futurebuild-inner-section-h1{
+               padding-left: 20vw;
+               display: block;
+                margin: 0 0;
+               width: 40%;
+               @include media('<=phone'){
+                width: 65%;
+
+            }
+               span{
+                    h1{
+                        display: block;
+                        margin: 0 0;
+                        color: $black;
+                        height: 110px;
+                        font-size: 7vw;
+                        font-weight: 100;
+                        line-height: 1.5;
+                        @include media('<=phone'){
+                            font-size: 11vw;
+                            height: 60px;
+
+            
+                        }
+
+                    }
+                    &:nth-child(2){
+                        h1{
+                        border-bottom: 2px solid $black;}
+                    }
+                    &:nth-child(3){
+                        h1{
+                        border-bottom: 2px solid $black;}
+                    }
+                    &:nth-child(4){
+                        h1{
+                        border-bottom: 2px solid $black;}
+                    }
+
+                }
+           }
+       }
+   } 
+}
+
+.projects1{
     position: relative;
-    height: 100vh;
+    height: 90vh;
     z-index: 10;
     @include media('<=phone'){
         
@@ -298,7 +415,7 @@
         }
         .projectimages{
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-end;
             width: 100%;
             align-items: center;
             @include media('<=phone'){
@@ -307,18 +424,20 @@
             .image{
                 width: 100%;
                 display: flex;
-                opacity: 0;
+                justify-content: center;
+
                 @include media('<=phone'){
                     display: flex;
                     justify-content: center;
                     object-fit: contain;
                 }
                 span{
-                    width: 60%;
-                   
+                    width: 80%;
+                    display: block;
+                    background-size: cover;
+                    overflow: hidden;
+                    background-repeat: no-repeat;
                     img{
-                        width: 70%;
-
                         /*&:hover{
                             box-shadow: 0px 39px 77px 10px rgba(0, 0, 0, 0.100);
                             transition: box-shadow 0.2s ease-in-out;
@@ -335,22 +454,30 @@
             }
             .imagee{
                 width: 60%;           
-                opacity: 0;
                 @include media('<=phone'){
                     padding-top: 3rem;
                     width: 100%;
                 }
-                span{                   
+                .project1_discription{                   
                     span{
-                        font-size: 1.5rem;
+                        font-size: 3rem;
                         line-height: 115%;
                         display: block;
                         color: $black;
+                        display: block;
+                        background-size: cover;
+                        overflow: hidden;
+                        background-repeat: no-repeat;
                         @include media('<=phone'){
                             font-size: 1rem;
                             line-height: 1.5;
                         }
+                        &:nth-child(2){
+                            font-size: 1rem;
+                        }
                     }  
+                    
+                   
                 }
                 
             }
@@ -361,7 +488,7 @@
 .projects2{
     position: relative;
     color: $black;
-    height: 100vh;
+    height: 90vh;
     z-index: 10;
     @include media('<=phone'){
         height: 150vh;
@@ -404,25 +531,30 @@
             }
 
             .imagee{
-                width: 60%;
+                width: 100%;
                 font-size: 1.5rem;
                 @include media('<=phone'){
                     display: block;
                     width: 100%;
                     font-size: 1rem;
                 }
-                span{
-                   font-size: 1.5rem;
-                   @include media('<=phone'){
+                .project2_discription{
+                    width: 60%;
+                    font-size: 3rem;
+                    display: block;
+                    @include media('<=phone'){
                             line-height: 1.5;
                             font-size: 1rem;
                     }
                     span{
                         display: block;
                         line-height: 1.2;
-                        font-size: 1.5rem;
+                        font-size: 3rem;
                         @include media('<=phone'){
                             line-height: 1.5;
+                            font-size: 1rem;
+                        }
+                        &:nth-child(2){
                             font-size: 1rem;
                         }
                     }  
@@ -431,9 +563,9 @@
             }
             
             .image{
-              width: 100%;
+              width: 60%;
               display: flex;
-              justify-content: flex-end;
+              justify-content: flex-start;
               background-size: cover;
               overflow: hidden;
               background-repeat: no-repeat;
@@ -445,9 +577,7 @@
             }
                 span{
                     width: 80%;
-                    opacity: 0;
                     display: block;
-                    text-align: right;
                     background-size: cover;
                     overflow: hidden;
                     background-repeat: no-repeat;
@@ -468,6 +598,7 @@
                         width:70% ;
                             
                         }
+                        
                     }
                 }
                 
@@ -480,13 +611,106 @@
 
 .projects3{
     position: relative;
-    color: $black;
-    height: 100vh;
+    height: 90vh;
     z-index: 10;
     @include media('<=phone'){
-       height: 150vh;
-       border-bottom: 1px solid $orange;
+        
+    border-bottom: 1px solid $orange;
+
     }
+    .project{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        @include media('<=phone'){
+            display: block;
+
+        }
+        .project-heading{
+            opacity: 0;
+            div{
+                font-size: 1.5rem;
+                color: $orange;
+               
+            }
+        }
+        .projectimages{
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            align-items: center;
+            @include media('<=phone'){
+                display: block;
+            }
+            .image{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                @include media('<=phone'){
+                    display: flex;
+                    justify-content: center;
+                    object-fit: contain;
+                }
+                span{
+                    width: 80%;
+                    display: block;
+                    background-size: cover;
+                    overflow: hidden;
+                    background-repeat: no-repeat;
+                    img{
+
+                        /*&:hover{
+                            box-shadow: 0px 39px 77px 10px rgba(0, 0, 0, 0.100);
+                            transition: box-shadow 0.2s ease-in-out;
+                             
+                        }*/
+
+                        @include media('<=phone'){
+                            width: 60%;
+                            padding-top: 5rem;
+                        }
+                    }
+                }
+                
+            }
+            .imagee{
+                width: 60%;           
+                @include media('<=phone'){
+                    padding-top: 3rem;
+                    width: 100%;
+                }
+                .project3_discription{                   
+                    span{
+                        font-size: 3rem;
+                        line-height: 115%;
+                        display: block;
+                        color: $black;
+
+                        @include media('<=phone'){
+                            font-size: 1rem;
+                            line-height: 1.5;
+                        }
+                        &:nth-child(2){
+                            font-size: 1rem;
+                        }
+                    }   
+                } 
+            }
+        }
+    }
+}
+
+.projects4{
+    position: relative;
+    color: $black;
+    height: 90vh;
+    z-index: 10;
+    @include media('<=phone'){
+        height: 150vh;
+        border-bottom: 1px solid $orange;
+
+     }
     .project{
         width: 100%;
         display: flex;
@@ -497,10 +721,11 @@
         }
         .project-heading{
             div{
+                
                 span{
                     font-size: 1.5rem;
                     @include media('<=phone'){
-                        font-size:1rem;
+                        font-size: 1rem;
                     }
                 }
                 
@@ -513,203 +738,83 @@
             width: 100%;
             align-items: center;
             @include media('<=phone'){
-                padding-top: 1rem;
                 display: block;
+                width: 90%;
+                padding-top: 5rem;
+              
+                   
+                
             }
+
             .imagee{
-                width: 50%;
+                width: 100%;
                 font-size: 1.5rem;
-                line-height: 135%;
-                padding-right: 1rem;
                 @include media('<=phone'){
-                    font-size: 1rem;
+                    display: block;
                     width: 100%;
-                }
-                span{
-                   font-size: 1.5rem;
-                   @include media('<=phone'){
                     font-size: 1rem;
                 }
-                 span{
-                     display: block;
-                     font-size: 1.5rem;
-                     @include media('<=phone'){
-                        font-size: 1rem;
+                .project4_discription{
+                    width: 60%;
+                    font-size: 3rem;
+                    display: block;
+                    @include media('<=phone'){
+                            line-height: 1.5;
+                            font-size: 1rem;
                     }
-                 }  
+                    span{
+                        display: block;
+                        line-height: 1.2;
+                        font-size: 3rem;
+                        @include media('<=phone'){
+                            line-height: 1.5;
+                            font-size: 1rem;
+                        }
+                        &:nth-child(2){
+                            font-size: 1rem;
+                        }
+                    }  
                 }
                 
             }
-            
             .image{
-              width: 100%;
+              width: 60%;
               display: flex;
-              justify-content: right;
+              justify-content: flex-start;
+              background-size: cover;
+              overflow: hidden;
+              background-repeat: no-repeat;
               @include media('<=phone'){
-                display: block;
-                }
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                padding-top: 0rem;
+            }
                 span{
-                    width: 70%;
-                    display: flex;
-                    justify-content: center;
-                    img{
+                    width: 80%;
+                    display: block;
+                    background-size: cover;
+                    overflow: hidden;
+                    background-repeat: no-repeat;
+                    @include media('<=phone'){
+                        margin-top: 8rem;
+                        text-align: center;    
                         width: 60%;
-                        @include media('<=tablet'){
-                            width: 70%;
-                            height: max-content;
-                          }
-                        @include media('<=phone'){
-                            display: flex;
-                            justify-content: center;
-                            width: 50%;
-                            margin-top: 10rem;
-
-                            }
-                      /*  &:hover{
-                            box-shadow: 0px 39px 77px 10px rgba(0, 0, 0, 0.200);
+                    }
+                    img{
+                        background-size: cover;
+                       /* &:hover{
+                            box-shadow: 0px 39px 77px 10px rgba(0, 0, 0, 0.300);
                             transition: box-shadow 0.2s ease-in-out;
                              
                          }*/
-                    }
-                }
-                
-                .imagee{
-                    margin-left: 1.5rem;
-                    @include media('<=phone'){
-                        width: 100%;
-                        margin-left: 0rem;
-                        margin-top: 5rem;
-                     }
-                    span{
-                        width: 100%;
-                        font-size: 1.5rem;
                         @include media('<=phone'){
-                            font-size: 1rem;
-                         }
-                    }
-                }
-                
-            }
-
-           
-        }
-    }
-}
-
-.projects4{
-    position: relative;
-    color: $black;
-    height: 100vh;
-    z-index: 10;
-    @include media('<=phone'){
-        height: 150vh;
-
-     }
-    .project{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        @include media('<=phone'){
-           display: block;
-        }
-        .project-heading{
-            div{
-                span{
-                    font-size: 1.5rem;
-                    @include media('<=phone'){
-                        font-size:1rem;
+                            background-size: contain;
+                            width:70%;
+                        }
                     }
                 }
             }
-        }
-        
-        .projectimages{
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            align-items: center;
-            @include media('<=phone'){
-                padding-top: 1rem;
-                display: block;
-            }
-            .imagee{
-                width: 50%;
-                font-size: 1.5rem;
-                line-height: 135%;
-                padding-right: 1rem;
-                @include media('<=phone'){
-                    font-size: 1rem;
-                    width: 100%;
-                }
-
-                span{
-                   font-size: 1.5rem;
-                   @include media('<=phone'){
-                    font-size: 1rem;
-                 }
-                 span{
-                     display: block;
-                     font-size: 1.5rem;
-                     @include media('<=phone'){
-                        font-size: 1rem;
-                     }
-                 }  
-                }
-                
-            }
-            
-            .image{
-              width: 100%;
-              display: flex;
-              justify-content: right;
-              @include media('<=phone'){
-                display: block;
-             }
-                span{
-                    width: 70%;
-                    display: flex;
-                    justify-content: center;
-                    
-                    img{
-                        width: 60%;
-                        @include media('<=tablet'){
-                            width: 70%;
-                            height: max-content;
-                          }
-                         @include media('<=phone'){
-                            display: flex;
-                            justify-content: center;
-                            width: 50%;
-                            margin-top: 5rem;
-                          }
-                       /* &:hover{
-                            box-shadow: 0px 39px 77px 10px rgba(0, 0, 0, 0.150);
-                            transition: box-shadow 0.2s ease-in-out;
-                             scale: 1.02;
-                            transition: scale 0.2s ease-in-out;
-
-                         }*/
-                    }
-                }
-                .imagee{
-                    margin-left: 1.5rem;
-                    @include media('<=phone'){
-                        width: 100%;
-                        margin-left: 0rem;
-                        margin-top: 10rem;
-                     }
-                    span{
-                        width: 100%;
-                        font-size: 1.5rem;
-                        @include media('<=phone'){
-                            font-size: 1rem;
-                         }
-                    }
-                }
-            }
-
-           
         }
     }
 }
@@ -722,9 +827,10 @@
 
 .contact_us{
     position: relative;
-    margin-top: 10rem;
+    margin-top: 1rem;
     height: 100vh;
     padding-top: 10rem;
+    background-color: $black;
     .row{
         
         .mailme{
@@ -838,7 +944,7 @@
             img{
                 width: 20rem;
                 @include media('<=phone'){
-                    display: block;
+                    display: none;
                     width: 60%;
                 }
             }

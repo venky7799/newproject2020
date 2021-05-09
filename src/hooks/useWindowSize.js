@@ -12,21 +12,37 @@ export default function useWindowSize() {
 
   
  
+// let kk=window.location;
+  
+//   const[location,setLocation]=useState(kk);
 
+   
+    
+//     function handleResize() {
+//     setWindowSize(getSize());
+//   }
+
+ 
+//     if (location=== "http://localhost:3000/solar") {
+//       setLocation("kk");
+//       console.log(location);
+//       handleResize()
+//     };
+  
+
+ 
+ 
 
   useEffect(() => {
     function handleResize() {
       setWindowSize(getSize());
     }
-   
     
-
-      
-
-    window.addEventListener("click", handleResize);
-    
+    document.addEventListener("click", handleResize);
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {window.removeEventListener("resize", handleResize)
+    
+  }
   }, []);
 
   return windowSize;

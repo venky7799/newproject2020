@@ -4,6 +4,11 @@ import solartent from "../assets/solar-tent.jpg";
 import solarseahouse from "../assets/solar-house-sea.jpg";
 import solarhouse from "../assets/solar-house.jpg";
 import solarhousebeach from "../assets/solar-house-1.jpg";
+import solarrect from "../assets/solarflare-min.png";
+import solarsee from "../assets/Rectangle 81-min.png";
+import solarmessage from "../assets/solarmessage.png";
+import contactuscircle from "../assets/contactuscircle.png";
+
 
 import {Helmet} from "react-helmet";
 import gsap from "gsap";
@@ -62,50 +67,50 @@ const Solar  =()=>{
         })
 */
 
-          const j3= gsap.timeline();
-          j3.fromTo(".tablegroup-row",{opacity:0,y:"+10"}, 
-          {opacity:1, scale: 1,duration: 1.5,y:"0", immediateRender: false})
+        //   const j3= gsap.timeline();
+        //   j3.fromTo(".tablegroup-row",{opacity:0,y:"+10"}, 
+        //   {opacity:1, scale: 1,duration: 1.5,y:"0", immediateRender: false})
 
           
-            ScrollTrigger.create({
-                trigger: '.solar-tablesection',
-                start:"-90px 20%", 
-                end:"bottom bottom",
-                animation: j3,
-                toggleActions: "play none none none",
-            })
+        //     ScrollTrigger.create({
+        //         trigger: '.solar-tablesection',
+        //         start:"-90px 20%", 
+        //         end:"bottom bottom",
+        //         animation: j3,
+        //         toggleActions: "play none none none",
+        //     })
 
             
-            const j4= gsap.timeline();
-            j4.fromTo(".solar-wesell",{opacity:0,y:"+10"}, 
-            {opacity:1, scale: 1,duration: 1.5,y:"0"})
+        //     const j4= gsap.timeline();
+        //     j4.fromTo(".solar-wesell",{opacity:0,y:"+6"}, 
+        //     {opacity:1, scale: 1,duration: 1.5,y:"0"})
             
             
-              ScrollTrigger.create({
-                  trigger: '.solar-wesell',
-                  start:"-90px 20%", 
-                  end:"bottom bottom",
-                  animation: j4,
-                  toggleActions: "play none none none",
+        //       ScrollTrigger.create({
+        //           trigger: '.solar-wesell',
+        //           start:"-90px 20%", 
+        //           end:"bottom bottom",
+        //           animation: j4,
+        //           toggleActions: "play none none none",
                   
-              });
+        //       });
 
-              const j5= gsap.timeline();
-              j5.fromTo(".solar-stats",{opacity:0,y:"+10"}, 
-              {opacity:1, scale: 1,duration: 1.5,y:"0"})
+        //       const j5= gsap.timeline();
+        //       j5.fromTo(".solar-stats",{opacity:0,y:"+6"}, 
+        //       {opacity:1, scale: 1,duration: 1.5,y:"0"})
     
               
-              ScrollTrigger.create({
-                trigger: '.solar-stats',
-                start:"-90px 20%", 
-                end:"bottom bottom",
-                animation: j5,
-                toggleActions: "play none none none",
-            })
+        //       ScrollTrigger.create({
+        //         trigger: '.solar-stats',
+        //         start:"-90px 20%", 
+        //         end:"bottom bottom",
+        //         animation: j5,
+        //         toggleActions: "play none none none",
+        //     })
           
        
           
-    })
+    },[])
     
 
         
@@ -180,26 +185,73 @@ const Solar  =()=>{
                 </div>
             </section>
 
+            <section className="solarnumbers">
+                <div className="co2emi">
+                    <div className="co2space">
+                
+                    </div>
+                    <div className="co2space2">
+                        <h2>32,000 mt of co2</h2>
+                    </div>
+                    <div>
+                        <p>
+                            emmision by the source as per 2018 world wide a
+                        </p>
+                        <div>
+                            <img alt="solarwallimage" src={solarmessage}/>
+                        </div>
+                    </div>
+                </div>
+                <div className="electricity">
+                   <div className="eleccol1">
+                       <p>
+                          <span> 24739.7 twh </span>electricity consume as per sources in 2018
+                       </p>
+
+                   </div>
+                   <div className="spaceelec">
+                        <img alt="solarwallimage" src={solarrect}/>
+                      
+                    </div>
+                    <div className="electricpic">
+
+                    </div>
+                </div>
+                <div className="howwarm">
+                        <div className="howwarnspace1">
+
+                        </div>
+                    <div className="warn">
+                        <img alt="solarwallimage" src={solarsee}/>
+
+                        <p>
+                        <span> How Many Solar Panels Would It Take To Power The World? </span>It would take 51.4 billion 350W solar panels to power the world! Put another way, this is the equivalent of a solar power plant that covers 115,625 square miles. 
+                        </p>
+                    </div>
+                    <a href="mailto:primary@bricksroot.com"><div className="howwarnspace2">
+                       <img alt="contactuscircle" src={contactuscircle}/>
+                    </div></a>
+                </div>
+            </section>
+            <section className="solarxhorizontal">
+                <span>
+                    <h1 className="solarxhorizonatal_h1">If we used 350W solar panels, we’d need 51.428 BILLION solar panels</h1>
+                </span>
+            </section>
             <section className="solarcontainer">
                 <div className="container">
                     <div className="row v-center space-between">
                         <div className="project">
-                            <div className="project-heading">
-                                <div></div>
-                            </div>
-
                             <div className="projectimages">
-
                                 <div className="imagee"> 
-                                    <span id="imageespan"> As per 2020 31st March 34GW of solar power is installed, Overall Target of 100GW </span>
-                                    
+                                    <span className="solarcontainer_discription">
+                                        <span>Our target</span>
+                                        <span>is we want to install 1GW of solar power with in 3years, our internal goal are aggressive. As per 2020 31st March 34GW of solar power is installed.</span>
+                                    </span>
                                 </div>
-
                                 <div className="image">
-                                    <div className="overlaysolarcontainer"></div>
                                     <span><img alt="solarwallimage" src={solartent}/></span>                                
                                 </div>
-                            
                             </div>
                         </div>
                         

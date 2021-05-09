@@ -4,10 +4,10 @@ const SideHeading=()=>{
     return(
         <div className="sidebar pagee">
           
-                <div className="vertical">
+                {/* <div className="vertical">
                     <a href="http://localhost:3000/solar">solar ENERGY</a>
                     <a href="http://localhost:3000/Cc">cc CAMERAS</a>                
-                </div>
+                </div> */}
         </div>
        
     );

@@ -6,7 +6,8 @@ const Navigation=()=>{
 
  
     return(
-        <nav >
+        <nav>
+            
             <div className="container">
                 <div className="nav-columns">
                     <div className="nav-column">
@@ -46,8 +47,8 @@ const Navigation=()=>{
                             <ul className="nav-info">
                                 <li className="nav-info-label">Headquarter</li>
                                 <li>Ring Road,shiridi sai nagar</li>
-                                <li>pl.no-39</li>
-                                <li>vizianagaram.Andhrapradesh,India</li>
+                                <li>Plot number-39</li>
+                                <li>Vizianagaram.Andhrapradesh,India</li>
 
                             </ul>
                             <ul className="nav-info">
@@ -62,6 +63,7 @@ const Navigation=()=>{
                     </div>
                 </div>
             </div>
+
         </nav>
     )
 };

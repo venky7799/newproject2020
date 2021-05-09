@@ -5,6 +5,7 @@ import Header from "./component/header";
 import Navigation from "./component/navigation";
 import useWindowSize from "./hooks/useWindowSize";
 import ReactGa from "react-ga";
+import gsap from "gsap";
 
 /*import {TweenMax, Power3} from "gsap";
 import ScrollMagic from "scrollmagic";
@@ -73,15 +74,13 @@ function App(){
 
   // Run scrollrender once page is loaded.
   useEffect(() => {
-
-
     requestAnimationFrame(() => skewScrolling());
-  }, []);
+  },[]);
 
   setTimeout(() => {
     setBodyHeight();
     console.log("asdf");
-  }, 5000);
+  }, 1000);
 
  
   //set the height of the body.
@@ -101,13 +100,17 @@ function App(){
     }px`;
   };
 
-  var as = document.addEventListener("click",setBodyHeight)
+//   //set the height of the body.
+//  useEffect(() => {
+//     var saidHelloo = "ass";
 
-  //set the height of the body.
-  useEffect(() => {
-    setBodyHeight();
-    
-  }, [as]);
+//     function setBodyHeightclick() {
+//       setBodyHeight();
+//       if (saidHelloo==="ass") saidHelloo="ass"&&setBodyHeight();
+//     }
+//     document.addEventListener("click",setBodyHeightclick)
+
+//   });
 
 
 
@@ -126,23 +129,24 @@ function App(){
     const acceleration = difference / size.width;
     const velocity = +acceleration;
     const skew = velocity * 7.5;
-
+   
     //Assign skew and smooth scrolling to the scroll container
     scrollContainer.current.style.transform = `translate3d(0, -${data.rounded}px, 0) skewY(${skew}deg)`;
-
-    //loop vai raf
+  //loop vai raf
     requestAnimationFrame(() => skewScrolling());
-  
+    
+     
+    
   }
 
+  
 
 
 
-/*
   //preventing flash from happening.//  
   gsap.to("body",0,{css:{visibility:"visible"}});
 
-*/
+
 
 //this is capturing height and width and setting it to height and widht properties
   const[dimensions, setDimensions]=useState({
@@ -168,7 +172,7 @@ function App(){
     },1000);
       
       window.addEventListener("resize",debounceHandleResize);
-
+    
     //removes event listener from window
     return()=>{
       window.removeEventListener("resize", debounceHandleResize);
@@ -189,7 +193,7 @@ function App(){
         <Header dimensions={dimensions} />
         
           <div className="App">
-            <Suspense fallback={<div>Loading..</div>}>
+            <Suspense fallback={<div style={{color: "black"}}>Loading..</div>}>
               {routes.map(({path,Component})=>(
                 <Route key={path} exact path={path}>
                   <Component/>
