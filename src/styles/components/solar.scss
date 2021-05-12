@@ -19,9 +19,11 @@
                 justify-content: center;
                 align-items: center;
                 text-align: center;
+                overflow: hidden;
+                background-size: cover;
+                opacity: 0;
                
             img{
-                width: 70%;
                 height: min-content;
                 filter: contrast(90%);
                 @include media('<=phone'){
@@ -34,9 +36,9 @@
                 position: absolute;  
                 top: 20rem; 
                 right: -40rem;
-                width: 100%;
+                width: 1280px;
                 height: 100vh;
-                background: rgb(0, 0, 0);
+                background: rgba(0, 0, 0, 0.014);
                 @include media('<=phone'){
                     height:50vh ;
                 }        

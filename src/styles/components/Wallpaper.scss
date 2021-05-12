@@ -432,7 +432,7 @@
                     object-fit: contain;
                 }
                 span{
-                    width: 80%;
+                    width: 70%;
                     display: block;
                     background-size: cover;
                     overflow: hidden;
@@ -453,7 +453,9 @@
                 
             }
             .imagee{
-                width: 60%;           
+                width: 60%;    
+                color: $white;
+                mix-blend-mode: difference;       
                 @include media('<=phone'){
                     padding-top: 3rem;
                     width: 100%;
@@ -461,13 +463,10 @@
                 .project1_discription{                   
                     span{
                         font-size: 3rem;
-                        line-height: 115%;
-                        display: block;
-                        color: $black;
+                        line-height: 1.2;
                         display: block;
                         background-size: cover;
                         overflow: hidden;
-                        background-repeat: no-repeat;
                         @include media('<=phone'){
                             font-size: 1rem;
                             line-height: 1.5;
@@ -487,7 +486,6 @@
 
 .projects2{
     position: relative;
-    color: $black;
     height: 90vh;
     z-index: 10;
     @include media('<=phone'){
@@ -533,6 +531,8 @@
             .imagee{
                 width: 100%;
                 font-size: 1.5rem;
+                color: $white;
+                mix-blend-mode: difference;
                 @include media('<=phone'){
                     display: block;
                     width: 100%;
@@ -540,8 +540,8 @@
                 }
                 .project2_discription{
                     width: 60%;
-                    font-size: 3rem;
                     display: block;
+                   
                     @include media('<=phone'){
                             line-height: 1.5;
                             font-size: 1rem;
@@ -550,6 +550,7 @@
                         display: block;
                         line-height: 1.2;
                         font-size: 3rem;
+                      
                         @include media('<=phone'){
                             line-height: 1.5;
                             font-size: 1rem;
@@ -608,7 +609,7 @@
         }
     }
 }
-
+//havent changes color and mix-blend-mode for 3 and 4//
 .projects3{
     position: relative;
     height: 90vh;
@@ -653,7 +654,7 @@
                     object-fit: contain;
                 }
                 span{
-                    width: 80%;
+                    width: 70%;
                     display: block;
                     background-size: cover;
                     overflow: hidden;

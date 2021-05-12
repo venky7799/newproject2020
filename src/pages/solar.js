@@ -25,11 +25,11 @@ const Solar  =()=>{
         gsap.registerPlugin(ScrollTrigger);
         const j1= gsap.timeline();
         j1.fromTo(".solarorange",{ backgroundColor:"#fefffe" ,scale: 1.5,y:"-50"}, 
-        {y:"-800", scale: 1,ease:"Expo.easeInOut",duration: 3.5,display:"none"})
-        j1.fromTo(".solarimage img",{ opacity: 0, scale: 1.5}, 
-        {opacity: 1, scale: 1,duration: 1.5,delay:'-2.5', immediateRender: false})
-        .fromTo(".overlaysolar",{ x: "0"}, 
-        {opacity: 1,display:"none", scale: 1,filter: "saturate(0)", x: "-1500",delay:"-1.1", duration: 1.5, immediateRender: false});
+        {y:"-800", scale: 1,ease:"Power3.easeInOut",duration: 2.5,display:"none"})
+        j1.fromTo(".solarimage",{opacity: 0,width:"0"}, 
+        {opacity: 1, width:"100%",duration: 1.5,delay:'-1.5',ease:"Power3.easeInOut", immediateRender: false})
+        // .fromTo(".overlaysolar",{ x: "0"}, 
+        // {opacity: 1, scale: 1,filter: "saturate(0)", x: "-200px",delay:"-1.1", duration: 3, display:"none"});
 
         gsap.registerPlugin(ScrollTrigger);
 

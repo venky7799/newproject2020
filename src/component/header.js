@@ -39,8 +39,7 @@ const Header=({history, dimensions})=>{
         
         //run open menu animation
         gsap.to("nav",{css:{display:"block"}});
-        gsap.to('body',{css:{overflow:"hidden"}});
-        
+        gsap.to('body',{css:{overflow:"hidden"}})
         tl2.to('.App',{duration:1,
         y: dimensions.width <= 654 ? "70vh" : (dimensions.height/1.1)+window.scrollY,
       ease:"expo.inOut"})

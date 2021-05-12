@@ -94,8 +94,8 @@ const Wallpaper=()=>{
             start:"-60px 50%", 
             end:"bottom bottom",
             animation: t3,
-            toggleActions: "play none repeat reset",
-            markers:true
+            toggleActions: "play none none none",
+            // markers:true
              
         })
 
@@ -104,9 +104,9 @@ const Wallpaper=()=>{
     
     useEffect(()=>{
         const t31=gsap.timeline();
-        t31.to(".exactly2",{background:"#f0efef"})
-            .to(".creativity2",{background:"#f0efef"})
-            .to(".itsection2",{background:"#f0efef"})
+        t31
+        .to("#bgcolor",{background:"white"})
+       
         .fromTo(".discriptionn span div span",1.2,{opacity:0, y:200,ease:"power4.out",skewY:20, 
         stagger:{
             amount:"0.8"
@@ -126,8 +126,8 @@ const Wallpaper=()=>{
         start:"-60px 50%", 
         end:"bottom bottom",
         animation: t31,
-        toggleActions: "play none repeat reset",
-        markers:true
+        toggleActions: "play none none none",
+        //markers:true
         })
         
     })
@@ -145,8 +145,8 @@ const Wallpaper=()=>{
             start:"-60px 50%", 
             end:"bottom bottom",
             animation: tt1,
-            toggleActions: "play none repeat reset",
-            markers:true
+            toggleActions: "play none none none",
+            //markers:true
             })
       },[])
 
@@ -173,8 +173,8 @@ const Wallpaper=()=>{
                 start:"-60px 50%", 
                 end:"bottom bottom",
                 animation: t5,
-                toggleActions: "play none repeat reset",
-                markers:true
+                toggleActions: "play none none none",
+                //markers:true
               })
              
 
@@ -184,7 +184,7 @@ const Wallpaper=()=>{
             
               .from(".projects2 .projectimages .imagee", {opacity:0,y:"200px",duration: 1,ease:"Power3.easeInOut"})
   
-              .from(".projects2 .projectimages .image span", {width:"0px",delay:"-0.5",duration:1,ease:"Power3.easeInOut"})
+              .from(".projects2 .projectimages .image span", {width:"0px",delay:"-0.5",scale:1.15,duration:1,ease:"Power3.easeInOut"})
   
               
                 
@@ -193,8 +193,8 @@ const Wallpaper=()=>{
                 start:"-60px 50%", 
                 end:"bottom bottom",
                 animation: t6,
-                toggleActions: "play none repeat reset",
-                markers:true
+                toggleActions: "play none none none",
+                //markers:true
 
               })
         /*----------------------------project 3------------------ */
@@ -203,7 +203,7 @@ const Wallpaper=()=>{
               t7.fromTo(".projects3", {background:"#fefefe"}, 
               {background:"#fefefe", duration: 0.3, immediateRender: false})
             
-              .from(".projects3 .projectimages .image span",{delay:"-0.6",width:"0px",duration:1,ease:"Power3.easeInOut"})
+              .from(".projects3 .projectimages .image span",{delay:"-0.6",scale:1.15,width:"0px",duration:1,ease:"Power3.easeInOut"})
               
               .from(".projects3 .projectimages .imagee span",{opacity:0,y:"200px",duration: 1,delay:"-1",ease:"Power2.easeInOut"})
               
@@ -213,8 +213,8 @@ const Wallpaper=()=>{
                 start:"-60px 50%", 
                 end:"bottom bottom",
                 animation: t7,
-                toggleActions: "play none repeat reset",
-                markers:true
+                toggleActions: "play none none none",
+                //markers:true
               })
               
 
@@ -227,7 +227,7 @@ const Wallpaper=()=>{
             
               .from(".projects4 .projectimages .imagee", {opacity:0,y:"200px",duration: 1,ease:"Power3.easeInOut"})
   
-              .from(".projects4 .projectimages .image span", {width:"0px",delay:"-0.5",duration:1,ease:"Power3.easeInOut"})
+              .from(".projects4 .projectimages .image span", {width:"0px",delay:"-0.5",scale:1.15,duration:1,ease:"Power3.easeInOut"})
   
                 
                ScrollTrigger.create({
@@ -235,8 +235,8 @@ const Wallpaper=()=>{
                 start:"-60px 50%", 
                 end:"bottom bottom",
                 animation: t8,
-                toggleActions: "play none repeat reset",
-                markers:true
+                toggleActions: "play none none none",
+               // markers:true
 
 
               })
@@ -285,7 +285,7 @@ const Wallpaper=()=>{
                     </div>
 
             </section>
-            <section className="xhori">
+            <section  id="bgcolor" className="xhori">
                     <div><span className="secstroke">webdevelopment <span>webdevelopment</span>     webdevelopment      <span>webdevelopment</span>    webdevelopment  <span>webdevelopment</span> webdevelopment<span>webdevelopment</span> webdevelopment </span></div>
                     <div><span className="firststroke">bricksroot <span>bricksroot</span>     bricksroot      <span>bricksroot</span>    bricksroot  <span>bricksroot</span> bricksroot bricksroot bricksroot bricksroot</span></div>
                     <div><span className="secstroke">SOLAR PANELS <span>SOLAR PANELS</span>     SOLAR PANELS      <span>SOLAR PANELS</span>    SOLAR PANELS  <span>SOLAR PANELS</span> SOLAR PANELS <span>SOLAR PANELS</span> bricksroot <span>SOLAR PANELS</span></span></div>
@@ -329,7 +329,7 @@ const Wallpaper=()=>{
 */}
 
 
-            <section className="itsection2">
+            <section id="bgcolor" className="itsection2">
          
                 {/* css will be in itinfo.scss */}
                 <div className="container">
@@ -409,7 +409,7 @@ const Wallpaper=()=>{
 */}
 
 
-            <section className="exactly2">
+            <section id="bgcolor" className="exactly2">
          
          {/* css will be in itinfo.scss */}
          <div className="container">
@@ -448,7 +448,7 @@ const Wallpaper=()=>{
      </section>
 
 
-            <section className="creativity2">
+            <section id="bgcolor" className="creativity2">
                 
                 {/* css will be in itinfo.scss */}
                 <div className="container ">
@@ -510,7 +510,7 @@ const Wallpaper=()=>{
                 </div>
             </section>
 */}    
-            <section className="calltoaction">
+            <section  id="bgcolor" className="calltoaction">
                 <div className="container v-center">
                     <div className="center">
                         <a href="mailto:primary@bricksroot.com">

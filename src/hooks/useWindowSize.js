@@ -1,49 +1,27 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react"
 
 export default function useWindowSize() {
+  const isClient = typeof window === "object"
   function getSize() {
     return {
-      width: window.innerWidth,
-      height: window.innerHeight
-    };
+      width: isClient ? window.innerWidth : undefined,
+      height: isClient ? window.innerHeight : undefined,
+    }
   }
 
-  const [windowSize, setWindowSize] = useState(getSize);
-
-  
- 
-// let kk=window.location;
-  
-//   const[location,setLocation]=useState(kk);
-
-   
-    
-//     function handleResize() {
-//     setWindowSize(getSize());
-//   }
-
- 
-//     if (location=== "http://localhost:3000/solar") {
-//       setLocation("kk");
-//       console.log(location);
-//       handleResize()
-//     };
-  
-
- 
- 
+  const [windowSize, setWindowSize] = useState(getSize)
 
   useEffect(() => {
-    function handleResize() {
-      setWindowSize(getSize());
+    if (!isClient) {
+      return false
     }
-    
-    document.addEventListener("click", handleResize);
-    window.addEventListener("resize", handleResize);
-    return () => {window.removeEventListener("resize", handleResize)
-    
-  }
-  }, []);
+    function handleResize() {
+      setWindowSize(getSize())
+    }
 
-  return windowSize;
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
+
+  return windowSize
 }

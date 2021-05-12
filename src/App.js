@@ -1,12 +1,12 @@
 import React,{useEffect, useRef, useState, Suspense} from "react";
-import {Route} from "react-router-dom";
+import {Route,useLocation} from "react-router-dom";
 import "./styles/App.scss";
 import Header from "./component/header";
 import Navigation from "./component/navigation";
 import useWindowSize from "./hooks/useWindowSize";
 import ReactGa from "react-ga";
 import gsap from "gsap";
-
+//import $ from 'jquery'; 
 /*import {TweenMax, Power3} from "gsap";
 import ScrollMagic from "scrollmagic";
 import addIndicators from "scrollmagic";
@@ -46,8 +46,28 @@ function debounce(fn,ms) {
 
 
 function App(){ 
-  
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  }
+// useEffect(()=>{
 
+  
+// })
+//   $(document).ready(function(){
+//     $('.aap').mouseout(()=>{
+//          $('#mycursor').hide();
+//          return false;
+//     });
+//     $('.aap').mouseenter(()=>{
+//          $('#mycursor').show();
+//          return false;
+//     });
+//     $('.aap').mousemove(function(e){
+//          $('#mycursor').css('left', e.clientX - 20).css('top', e.clientY + 7);
+//     });
+// });
+
+var location=useLocation();
   useEffect(()=>{
     ReactGa.initialize("UA-192985470-1");
 
@@ -79,14 +99,7 @@ function App(){
 
   setTimeout(() => {
     setBodyHeight();
-    console.log("asdf");
-  }, 1000);
-
- 
-  //set the height of the body.
-  useEffect(() => {
-    setBodyHeight();
-  }, [size.height]);
+  }, 5000);
 
 
  
@@ -113,10 +126,13 @@ function App(){
 //   });
 
 
+// const [state, setState] = useState({
+//   scroll: 0,
+//   skew: 0,
+// })
 
-
-  // Scrolling
-  const skewScrolling = () => {
+    // Scrolling
+    const skewScrolling = () => {
     //Set Current to the scroll position amount
     data.current = window.scrollY;
     // Set Previous to the scroll previous position
@@ -129,10 +145,12 @@ function App(){
     const acceleration = difference / size.width;
     const velocity = +acceleration;
     const skew = velocity * 7.5;
-   
+    // setState({scroll:data.rounded,skew:skew});
     //Assign skew and smooth scrolling to the scroll container
+    //scrollContainer.current.style.transform = `translate3d(0, -${state.scroll}px, 0) skewY(${state.skew}deg)`;
+    
     scrollContainer.current.style.transform = `translate3d(0, -${data.rounded}px, 0) skewY(${skew}deg)`;
-  //loop vai raf
+    //loop vai raf
     requestAnimationFrame(() => skewScrolling());
     
      
@@ -140,6 +158,11 @@ function App(){
   }
 
   
+ 
+  //set the height of the body.
+  useEffect(() => {
+    setBodyHeight();
+  }, [size.height]);
 
 
 
@@ -155,12 +178,12 @@ function App(){
   });
 
 
-  useEffect(()=>{/*
-    //grab inner height of window fro mobile reasons when dealing with vh
-    let vh = dimensions.height*0.01;
+  useEffect(()=>{
+   // grab inner height of window fro mobile reasons when dealing with vh
+   // let vh = dimensions.height*0.01;
     //set css varible vh
-    document.documentElement.style.setProperty("--vh",`${vh}px`);
-*/
+   // document.documentElement.style.setProperty("--vh",`${vh}px`);
+
    //******************** */
     //create a function that sets the state to height and width
    
@@ -187,10 +210,11 @@ function App(){
 
 
   return (
-    <div ref={app} className="aap">
-      <div ref={scrollContainer} className="scroll">
+    <div ref={app} className="aap"> 
     
-        <Header dimensions={dimensions} />
+       <div ref={scrollContainer} className="scroll">
+    
+          <Header dimensions={dimensions} />
         
           <div className="App">
             <Suspense fallback={<div style={{color: "black"}}>Loading..</div>}>
@@ -204,6 +228,7 @@ function App(){
         <Navigation/>
     
       </div>
+      <div id="mycursor"></div>
     </div>
   );
 }

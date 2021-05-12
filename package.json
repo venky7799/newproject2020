@@ -7,6 +7,8 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.4",
     "gsap": "^3.6.1",
     "jquery": "^3.5.1",
     "node-sass": "^4.13.1",
@@ -16,6 +18,7 @@
     "react-helmet": "^6.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3",
+    "sass-loader": "^11.1.0",
     "scrollmagic": "^2.0.8"
   },
   "scripts": {
@@ -23,7 +26,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "watch": "webpack-dev-server --progress"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,5 +43,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.2",
+    "@babel/preset-env": "^7.14.2",
+    "@babel/preset-react": "^7.13.13",
+    "webpack": "4.44.2",
+    "webpack-cli": "3.3.6",
+    "webpack-dev-server": "3.11.1"
   }
 }

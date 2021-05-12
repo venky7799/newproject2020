@@ -10,7 +10,17 @@
 @import "./components/itinfo.scss";
 @import "./components/solar.scss";
 @import "./components/aboutus.scss";
-
+#mycursor {
+  cursor: none;
+  width: 97px;
+  height: 137px;
+  background:  url(cursor.png), auto;
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+}
 .aap{
   position: fixed;
   top:0;
@@ -18,7 +28,10 @@
   height:100%;
   width:100%;
   overflow:hidden;
+  cursor: url(cursor.png), auto;
+
   .scroll{
+    padding-bottom: 2rem;
   };
 }
 body,
@@ -33,6 +46,8 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $white;
+  cursor: url(cursor.png), auto;
+
 }
 
 .container {
@@ -91,6 +106,7 @@ html {
   transform: translateY(0);
   position: relative;
   background: rgba(0, 0, 0, 0);
+
 }
 
 
