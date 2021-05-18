@@ -1,0 +1,1009 @@
+
+.solar{
+    background:$black;
+    font-size: 16px;
+    
+    .solarorange{
+        position: absolute;
+        width: 100vw;
+        height:100vh ;
+        z-index: 300;
+    }
+    .solar-image-first{  
+        height: 100vh;  
+        @include media('<=phone'){
+            height:50vh ;
+        }  
+        .solarimage{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                overflow: hidden;
+                background-size: cover;
+                opacity: 0;
+               
+            img{
+                height: min-content;
+                filter: contrast(90%);
+                @include media('<=phone'){
+                   width: 100%;
+                }
+                
+            }
+            .overlaysolar{
+                display: block;
+                position: absolute;  
+                top: 20rem; 
+                right: -40rem;
+                width: 1280px;
+                height: 100vh;
+                background: rgba(0, 0, 0, 0.014);
+                @include media('<=phone'){
+                    height:50vh ;
+                }        
+            }
+            div{
+                display: flex;
+                justify-content: center;
+                transform: translate(-50%,-50%);
+                position: absolute;
+                text-align: center;
+                margin: auto;
+                span{
+                    color: $white;
+                    display: inline-flex;
+                    justify-content: center;
+                    position: absolute;
+                    padding:15px;
+                    font-size: 3rem;
+                    font-weight: 800;
+                    letter-spacing: 0.09rem;
+                    text-align: center;
+                    background:rgba(44, 44, 44, 0.384);
+                    width: 1000px;
+                    text-align: center;
+                    height: 100px;
+                    border: solid #CCCCCC 2px;
+                    padding: 0 10px;
+                    display: flex;
+                    align-items: center;
+                    @include media('<=phone'){
+                        font-size: 1rem;
+                        
+                       
+                 
+                     }
+                }
+            }
+            
+        }
+    }
+    .justsee-section{
+        position: relative;
+        height: 150vh;
+        .justsee-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+
+            @include media('<=phone'){
+                display: block;  
+            }
+
+            .justsee-container-col1{
+                position: relative;
+                width: 40%;
+                @include media('<=phone'){
+                   width: 100%;
+                   
+                 }
+                .justsee-headingsection{
+                    height: 20rem;
+                    @include media('<=phone'){
+                        display: block;
+                        height: 1px;
+                       
+                     }
+                    .justsee-headingsection-absolute{
+                        position: absolute;
+                        margin-left: 10rem;
+                        width: 40rem;
+                        
+                        @include media('<=phone'){
+                            margin-left: 0rem;
+                            width: 100%;
+                            text-align: center;
+                         }
+                        .justsee-heading{
+                            text-align: right;
+                            border-bottom: 1.5px solid $orange;
+                            @include media('<=phone'){
+                               text-align: center;
+                               
+                             }
+                             @include media('<=tablet'){
+                                text-align: center;
+                                
+                              }
+                            span{
+                                color: $orange;
+                                font-size: 6rem;
+                                @include media('<=phone'){
+                                    font-size: 2rem;
+                                    
+                                 }
+                            }
+                        }
+                        span{
+                            font-size: 1.5rem;
+                            &:first-child{
+                                color: $orange;
+                            }
+                        }
+                    }
+                }
+                .justsee-heading-col1-row{
+                    margin-top: 10rem;
+                    line-height: 1.2;
+
+                    @include media('<=phone'){
+                        font-size: 1rem;
+                       margin-top: 15rem;
+                       
+                     }
+                    .justsee-container-col1-row2heading{
+                        margin-bottom: 4rem;
+                        @include media('<=phone'){
+                            text-align: left;
+                           margin-bottom: 2rem;
+                           padding-left: 2rem;
+                         }
+                        span{
+
+                            font-size: 1.4rem;
+                            color: $orange;
+                           
+                        }
+                    }
+                    .justsee-container-col1-row2content{
+                        margin-top: 10px;
+                        @include media('<=phone'){
+                            width: auto auto;
+                            padding-left: 2rem;
+                            text-align: left;
+                            margin-bottom: 5rem;
+                            font-size: 1rem;
+                            margin-top: 1rem;
+                           
+                        }
+                        span{
+                            font-size: 1rem;
+                            line-height: 150%;
+
+                            @include media('<=phone'){
+                               font-size: 1rem;
+                            
+                            }
+                        }
+                    }
+                }
+                .solar-arrow{
+                    position: absolute;
+                    margin-top: 3rem;
+                    margin-right: 10rem;
+                    text-align: right;
+                    width: 100%;
+                    @include media('<=phone'){
+                       margin-left: -2rem;
+                       margin-top: 20rem;
+                       
+                
+                    }
+
+                    svg{
+                        transform: rotate(90deg);
+                        scale: 2;
+                        @include media('<=phone'){
+                            color: $orange;
+                        }
+                    }
+                }
+            }
+            .justsee-col2{
+                text-align: right;
+                @include media('<=phone'){
+                    text-align: center;
+                   
+                 }
+                span{
+
+                    img{
+                        width: 90%;
+                        @include media('<=phone'){
+                            width: 80%;
+                         }
+                    }
+                }
+            }
+        }
+    }
+
+    .solarnumbers{
+        display: flex;
+        padding: 10px;
+        height: 100vh;
+        position: relative;
+        @include media('<=phone'){
+        height: 180vh;
+        display: block;
+            
+         }
+        .co2emi{
+            width: 33.33%;
+            @include media('<=phone'){
+                width: 100%; 
+            }
+            .co2space{
+                height: 10vh;
+                background-color: $orange;
+            }
+           .co2space2{
+                height: 50vh;
+                @include media('<=phone'){
+                    height: 6vh;
+                }
+                h2{
+                    margin: 0 0;
+                    font-size: 8.23vw;
+                }
+            }
+            div{
+                display: flex;
+                height: 40vh;
+                p{
+                    margin: 0 0;
+                    line-height: 1.2;
+                    font-size: 1rem;
+                }
+                &:nth-child(2){
+                    img{
+display: none;
+                    }
+                }
+            }
+        }
+        .electricity{
+            width: 34%;
+            @include media('<=phone'){
+                width: 100%;
+                margin-top: 9rem;
+                
+             }
+            .eleccol1{
+                height: 20vh;
+                @include media('<=phone'){
+                    height: 10vh;
+                 }
+                p{
+                    margin: 0 0;
+                    font-size: 1.5rem;
+                    line-height: 1.2;
+                    span{
+                        font-size: 6vw;
+                        margin: 0 0;
+
+                    }
+                }
+            }
+            .spaceelec{
+                height: 60vh;
+                @include media('<=phone'){
+                    height: 20vh;
+
+
+                 }
+                img{
+                  display: none;
+                    @include media('<=phone'){
+                        width: 80%;
+
+                     }
+                }
+            }
+            .electricpic{
+                height: 20vh;
+            }
+        }
+        .howwarm{
+            width: 34%;
+            @include media('<=phone'){
+                display: block;
+                width:100%;
+             }
+            .howwarnspace1{
+                height: 5vh;
+                background-color: rgba(0, 0, 0, 0);
+            }
+            .warn{
+                height: 45vh;
+                @include media('<=phone'){
+                    height: 40vh;
+
+
+                 }
+                img{
+                    width: 50%;
+                    display: none;
+                    @include media('<=phone'){
+                        width: 39%;
+
+                     }
+                }
+                p{
+                    font-size: 1rem;
+                    display: inline-block;
+                    width: 48%;
+                    padding: 2px;
+                    @include media('<=phone'){
+                       display: inline;
+                       width: 100%;
+
+                     }
+                    span{
+                        color: $orange;
+                        display: inline-block;
+                        @include media('<=phone'){
+                            display: inline;
+                            width: 100%;
+     
+                          }
+                        }
+                        margin: 0 0;
+                        line-height: 1.2;
+                }
+            }
+            .howwarnspace2{
+                height: 50vh;
+                background-color: $orange;
+                @include media('<=phone'){
+                    height: 0vh;
+                }
+                img{
+                    width: 10%;
+                    position: absolute;
+                    bottom: 10px;
+                }
+               
+            }
+        }
+    }
+    .solarxhorizontal{
+        background-color:$background-white;
+        height: 20vh;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        span{
+            h1{
+                margin: 0 0;
+                color:$orange;
+                font-size: 2rem;
+                font-weight: 300;
+            }
+        }
+    }
+    .solarcontainer{
+        position: relative;
+        color: $black;
+        height: 90vh;
+        z-index: 10;
+        background-color: $white;
+        @include media('<=phone'){
+            height: 150vh;
+            border-bottom: 1px solid $orange;
+    
+         }
+        .project{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            @include media('<=phone'){
+                display: block;
+            }
+            .project-heading{
+                div{
+                    
+                    span{
+                        font-size: 1.5rem;
+                        @include media('<=phone'){
+                            font-size: 1rem;
+                        }
+                    }
+                    
+                }
+            }
+            
+            .projectimages{
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                align-items: center;
+                @include media('<=phone'){
+                    display: block;
+                    width: 90%;
+                    padding-top: 5rem;
+                  
+                       
+                    
+                }
+    
+                .imagee{
+                    width: 100%;
+                    font-size: 1.5rem;
+                    @include media('<=phone'){
+                        display: block;
+                        width: 100%;
+                        font-size: 1rem;
+                    }
+                    .solarcontainer_discription{
+                        width: 60%;
+                        font-size: 3rem;
+                        display: block;
+                        @include media('<=phone'){
+                                line-height: 1.5;
+                                font-size: 1rem;
+                        }
+                        span{
+                            display: block;
+                            line-height: 1.2;
+                            font-size: 3rem;
+                            @include media('<=phone'){
+                                line-height: 1.5;
+                                font-size: 1rem;
+                            }
+                            &:nth-child(2){
+                                font-size: 1rem;
+                            }
+                        }  
+                    }
+                    
+                }
+                
+                .image{
+                  width: 60%;
+                  display: flex;
+                  justify-content: flex-start;
+                  background-size: cover;
+                  overflow: hidden;
+                  background-repeat: no-repeat;
+                  @include media('<=phone'){
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    padding-top: 0rem;
+                    }
+                    span{
+                        width: 80%;
+                        display: block;
+                        text-align: left;
+                        background-size: cover;
+                        overflow: hidden;
+                        background-repeat: no-repeat;
+                        @include media('<=phone'){
+                            margin-top: 8rem;
+                            text-align: center;    
+                            width: 60%;
+                        }
+                        img{
+                            background-size: cover;
+                            width: 100%;
+                           /* &:hover{
+                                box-shadow: 0px 39px 77px 10px rgba(0, 0, 0, 0.300);
+                                transition: box-shadow 0.2s ease-in-out;
+                                 
+                             }*/
+                            @include media('<=phone'){
+                                background-size: contain;
+                                width:70%;   
+                            } 
+                        }
+                    }
+                } 
+            }
+        }
+    }
+    .solar-tablesection{
+        position: relative;
+        height: 80vh;
+        margin-top: 10rem;
+        @include media('<=phone'){
+           height: 200vh;
+           line-height: 1.5;
+        } 
+        .tablegroup{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .tablegroup-row{
+                display: flex;
+                width: 80%;
+                justify-content: space-between;
+                align-items: center;
+                @include media('<=phone'){
+                    display: block;
+                } 
+                .table-1{
+                    .table-col-1{
+                        .table-heading{
+                            @include media('<=phone'){
+                                margin-top: 1rem;
+                            } 
+                            span{
+                                font-size: 2.3rem;
+                            }
+                        }
+                        .table-content{
+                            margin-top: 60px;
+                            span{
+                               
+                                ol{
+                                    list-style: none;
+                                    padding: 0px;
+                                    margin: 0px;
+                                    li{
+                                        font-size: 1.31452vw;
+                                        padding: 17px 2px;
+                                        border-bottom: 1px solid $orange;
+                                        @include media('<=phone'){
+                                            font-size: 1rem;
+                                        } 
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }    
+        }
+    }
+    .solar-wesell{
+        position: relative;
+        height: 100vh;
+        @include media('<=phone'){
+           height: 150vh;
+        } 
+        .solar-wesell-container{
+            width: 90%;
+            margin: auto auto;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid white;
+            @include media('<=phone'){
+                display: block;
+             } 
+            .solar-wesell-container-col1{
+                width: 60%;
+                @include media('<=phone'){
+                    width: 100%;
+                 } 
+                .solar-arrow{
+                    margin-left: 15rem;
+                    @include media('<=phone'){
+                        margin-left: 1rem;
+
+                     } 
+                    svg{
+                        transform: rotate(90deg);
+                        scale: 2;
+                    }
+                }
+                .solar-wesell-container-col1-row2heading{
+                    margin-top: 10rem;
+                    span{
+                        color: $orange;
+                        font-size: 1.5rem;
+                    }
+                }
+                .solar-wesell-container-col1-row2content{
+                        margin-top: 4rem;
+                        width: 90%;
+                        @include media('<=phone'){
+                          width: 100%;
+                            margin-bottom: 5rem;
+                         } 
+                    span{
+                        font-size: 1.5rem;
+                        line-height: 40px;
+                        @include media('<=phone'){
+                            font-size: 1rem;
+                            line-height: 150%;
+                         } 
+
+                    }
+                }
+            }
+            .solar-wesell-container-col2{
+                text-align: right;
+                border-left: 2px solid $orange;
+                .solar-wesell-container-img{
+                    span{
+                        img{
+
+                            width: 90%;
+                        }
+                    }
+                }
+                .solar-wesell-container-img2{
+                    text-align:left;
+                    margin: 2rem 2rem;
+                    span{
+                      font-size: 1rem;
+                    }
+                }
+            }
+           
+        }
+        .solar-wesell-container-content{
+            display: flex;
+            justify-content: center;
+            background: $orange;
+
+            .solar-wesell-container-content-1{
+                width: 50%;
+                margin: 2rem 2rem;
+                padding: 2rem 3rem;
+                @include media('<=phone'){
+                  width: 100%;
+                  margin: 1rem 1rem;
+                  padding: 1rem 1.5rem;
+                 } 
+                span{
+                    font-size: 1.5rem;
+                    letter-spacing: inherit;
+                    font-weight: 400;
+                    @include media('<=phone'){
+                       font-size: 1rem;
+                     } 
+                }
+            }
+        }
+    }
+
+    .solar-stats{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10rem;
+        height: 100vh;
+       line-height: 1.5;
+       @include media('<=phone'){
+        padding-top: 0rem;
+
+     } 
+        .solar-stats-container{
+            display: flex;
+            justify-content: space-around;
+            
+            .solar-stats-col1{
+                width: 30%;
+                @include media('<=phone'){
+                    width: 49%;
+                    border-right: 1px solid $orange;
+
+                 } 
+                .solar-stats-col1-row{
+                    .solar-stats-col1-rowsub{
+                        margin-bottom: 4rem;
+
+                        .solar-stats-col1-rowsub-heading{
+                            margin-bottom: 2rem;
+                            span{
+                            color: $orange;
+
+                                @include media('<=phone'){
+                                   color: $orange;
+                                 } 
+                            }
+                        }
+                        span{
+
+                            @include media('<=phone'){
+                                font-size: 1rem;
+                    
+                             } 
+                        }
+                    }
+                }
+                .solar-stats-col1-row2{
+                    .solar-stats-col1-row2sub{
+
+                        .solar-stats-col1-row2sub-heading{
+                            margin-bottom: 2rem;
+
+                            span{
+                                color: $orange;
+
+                                @include media('<=phone'){
+                                    color: $orange;
+                                  } 
+                            }
+                        }
+                        span{
+                        }
+                    }
+                }
+            }
+            .solar-stats-col2{
+                width: 30%;
+                @include media('<=phone'){
+                    width: 49%;
+                 } 
+                .solar-stats-col2-row{
+                    .solar-stats-col2-rowsub{
+                        margin-bottom: 4rem;
+
+                        .solar-stats-col2-rowsub-heading{
+                            margin-bottom: 2rem;
+
+                            span{
+                                color: $orange;
+
+                                @include media('<=phone'){
+                                    color: $orange;
+                                  } 
+                            }
+
+                        }
+                        span{
+                            color: $white;
+                        }
+                        
+                    }
+                }
+                .solar-stats-col2-row2{
+                    .solar-stats-col2-row2sub{
+
+                        .solar-stats-col2-row2sub-heading{
+                            margin-bottom: 2rem;
+
+                            span{
+                                color: $orange;
+
+                                @include media('<=phone'){
+                                    color: $orange;
+                                  } 
+                            }
+                        }
+                        span{
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .ordernow-section{
+       
+            position: relative;
+            height: 100vh;
+            color: $black;
+            @include media('<=phone'){
+                height: 150vh;
+
+               } 
+            .ordernow-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                background: $background-white;
+                @include media('<=phone'){
+                   display: block;
+                  } 
+                .ordernow-container-col1{
+                    position: relative;
+                    width: 40%;
+                    @include media('<=phone'){
+                        width: 100%;
+                    } 
+                    .ordernow-headingsection{
+                        height: 20rem;
+                        .ordernow-heading{
+                            text-align: right;
+                            border-bottom: 1.5px solid rgb(0, 0, 0);
+                            span{
+                                color: $black;
+                                font-size: 6rem;
+                                @include media('<=phone'){
+                                    font-size: 6rem;
+                                    word-wrap: break-word;
+
+                                } 
+                            }
+                        }
+                        span{
+                            color: $orange;
+                            
+                            padding-top: 5px;
+                            font-size: 1.5rem;
+                        }
+                    }
+                    .ordernow-heading-col1-row{
+                        .ordernow-container-col1-row2heading{
+                            span{
+                                color: $orange;
+                                font-size: 1.5rem;
+                            }
+                        }
+                        .ordernow-container-col1-row2content{
+                            margin-top: 4rem;
+                            @include media('<=phone'){
+                                width: 100%;
+                            } 
+                            span{
+
+                                font-size: 1.5rem;
+                                @include media('<=phone'){
+                                    font-size: 1rem;
+                                } 
+                            }
+                        }
+                        .ordernow-container-col1-row3content{
+                            margin-top: 1rem;
+                            span{
+                                a{
+                                    font-size: 2rem;
+                                }
+                            }
+                        }
+                    }
+                    .solar-arrow{
+                        svg{
+                            scale: 2;
+                        }
+                    }
+                }
+                .ordernow-col2{
+                    text-align: right;
+                    width: 45%;
+                    @include media('<=phone'){
+                        text-align: center;
+                        margin-top: 9rem;
+                    } 
+                    span{
+                        img{
+                            width: 50%;
+                            @include media('<=phone'){
+                                width: 70%;
+                            } 
+                        }
+                    }
+                }
+            }
+        
+    }
+    .contact{
+        position: relative;
+       background: $background-white;
+       color: rgb(0, 0, 0);
+       padding-top: 6rem;
+       @include media('<=phone'){
+       height: 200vh;
+
+    } 
+        .contact-container{
+            height: 75vh;
+            width: 80%;
+            margin: auto auto;
+            .contact-rowandcol{
+            display: flex;
+            justify-content: space-between;
+            @include media('<=phone'){
+                display: block;
+
+            } 
+            .contact-col-1{
+                .contact-subcol{
+                    .contact-subcol-headingmain{
+                        margin-bottom: 6rem;
+                        span{
+
+                        }
+                    }
+                    .contact-subcol-heading{
+                        margin-bottom: 2.25rem;
+                        span{
+
+                        }
+                    }
+                    .contact-subcol-1-content{
+                        p{
+                            span{
+
+                            }
+                            span{
+                                a{
+                                    color: $orange;
+                                }
+                            }
+                        }
+                       
+                    }
+                }
+            }
+            .contact-col-2{
+                .contact-subcol{
+                    .contact-subcol-headingmain{
+                        margin-bottom: 6rem;
+
+                        span{
+
+                        }
+                    }
+                    .contact-subcol-content{
+                        .contact-subcol-heading{
+                            margin-bottom: 1.5rem;
+
+                            span{
+                                font-size: 1.5rem;
+                            }
+                        }
+                        .contact-subcol-1-content{         
+                            margin-bottom: 2.5rem;                                          
+                                span{
+                                    a{
+                                        color: $orange;
+
+                                        font-size: 13px;
+                                    }
+                                }
+                           
+                           
+                        }
+                    }
+                    
+                }
+            }
+            .contact-col-3{
+                .contact-subcol{
+                    .contact-subcol-headingmain{
+                        margin-bottom: 6rem;
+
+                        span{
+
+                        }
+                    }
+                    .contact-subcol-content{
+                        .contact-subcol-heading{
+                            margin-bottom: 1.5rem;
+
+                            span{
+    
+                            }
+                        }
+                        .contact-subcol-1-content{ 
+                            margin-bottom: 2.5rem;
+
+                                span{
+                                    a{
+                                    color: $orange;
+                                        
+                                    }
+                                }
+                           
+                           
+                        }
+                    }
+                    
+                }
+            }
+        }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+{
+  "name": "code",
+  "version": "0.1.0",
+  "homepage": "http://www.bricksroot.com/",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.4",
+    "gsap": "^3.6.1",
+    "jquery": "^3.5.1",
+    "node-sass": "^4.13.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-ga": "^3.3.0",
+    "react-helmet": "^6.1.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.3",
+    "sass-loader": "^11.1.0",
+    "scrollmagic": "^2.0.8"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build",
+    "watch": "webpack-dev-server --progress"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.2",
+    "@babel/preset-env": "^7.14.2",
+    "@babel/preset-react": "^7.13.13",
+    "webpack": "4.44.2",
+    "webpack-cli": "3.3.6",
+    "webpack-dev-server": "3.11.1"
+  }
+}

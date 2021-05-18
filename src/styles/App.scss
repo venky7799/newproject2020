@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700&display=swap");
+@import "./varibles.scss";
+@import "./breakpoints.scss";
+@import "./components/header.scss";
+@import "./components/banner.scss";
+@import "./components/cases.scss";
+@import "./components/sideheading.scss";
+@import "./components/Wallpaper.scss";
+@import "./components/navigation.scss";
+@import "./components/itinfo.scss";
+@import "./components/solar.scss";
+@import "./components/aboutus.scss";
+#mycursor {
+  cursor: none;
+  width: 97px;
+  height: 137px;
+  background:  url(cursor.png), auto;
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+}
+.aap{
+  position: fixed;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  overflow:hidden;
+  cursor: url(cursor.png), auto;
+
+  .scroll{
+    padding-bottom: 2rem;
+  };
+}
+body,
+html {
+  user-select: none;
+  background: $black;
+  overscroll-behavior-y: none;
+  margin: 0;
+  font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $white;
+  cursor: url(cursor.png), auto;
+
+}
+
+.container {
+  width: 1560px;
+  min-width: 1560px;
+  margin: 0 auto;
+  height: 100%;
+  @include media("<=1560px") {
+    width: 1280px;
+    min-width: 1280px;
+  }
+  @include media("<=desktop") {
+    width: 1080px;
+    min-width: 1080px;
+  }
+  @include media("<=1080px") {
+    width: 100%;
+    min-width: 100%;
+  }
+  .row {
+    display: flex;
+    height: 100%;
+    padding: 0 32px;
+    @include media("<=phone") {
+      padding: 0 16px;
+    }
+  }
+  .row-mobile-block{
+    @include media("<=phone") {
+      display: block;
+    }
+  }
+  .v-center {
+    align-items: center;
+  }
+  .space-between {
+    justify-content: space-between;
+  }
+  .h-center{
+    justify-content: center;
+  }
+}
+
+.container-fluid {
+  width: 100%;
+  height: 100%;
+  .row {
+    display: flex;
+    height: 100%;
+  }
+}
+
+
+.App{
+  z-index: 19;
+  transform: translateY(0);
+  position: relative;
+  background: rgba(0, 0, 0, 0);
+
+}
+
+
+.page{
+  width: 100%;
+  height: 100vh;
+  background: $black;
+  .row{
+    display: flex;
+    align-items: center;
+  }
+}
